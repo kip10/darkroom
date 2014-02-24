@@ -54,7 +54,7 @@
 		<div class="well well-small canbehidden"><p>Upload files by clicking on the box below or by dragging files into it</p></div>
 
 		<form accept-charset="utf-8" class="form-inline" id="shareform" method="POST"></form>
-		<form action="http://fldrp.me/buckets/n/y2sYPdT6" class="dropzone" id="filedrop"></form>
+		<form action="TargetUploadSite" class="dropzone" id="filedrop"></form>
 	</div>
 </div>
 
