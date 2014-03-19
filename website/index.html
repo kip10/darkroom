@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome to darkroom</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <div class="login" id="login">
+    <div id="loginBox" style="margin-left:50vw; float:left">
+  <p>HASDFL</p>
+  </div>
+  
+  <img src="images/login.svg" id="loginButton" style="margin-right:3vw; margin-top:4vh; margin-left:-100%; height:6vh; float:right; max-height:40px; cursor:pointer"  />
+  
+  <img src="images/signup.svg" style="margin-right:3vw; margin-top:90vh; height:6vh; float:right; max-height:40px;" />
+  <!-- end .login --></div>
+  
+  <script type="text/javascript">
+    var imgCount = 3;
+        var dir = 'images/';
+        var randomCount = Math.round(Math.random() * (imgCount - 1)) + 1;
+        var images = new Array
+                images[1] = "camera_lens.jpg",
+                images[2] = "camera_in_the_grass.jpg",
+                images[3] = "mountain_railroad.jpg",
+        document.getElementById("login").style.backgroundImage = "url(" + dir + images[randomCount] + ")"; 
+   </script>
+   <script type="text/javascript">
+	$( "#loginButton").click(function() {
+		$("#loginBox").toggle("clip");
+	});
+</script>
+</body>
+</html>
