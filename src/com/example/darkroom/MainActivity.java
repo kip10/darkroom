@@ -1,5 +1,8 @@
 package com.example.darkroom;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -12,6 +15,7 @@ import android.widget.EditText;
 public class MainActivity extends Activity{
 	EditText userNameText;
 	EditText passwordText;
+	EditText errorText;
 	Button loginButton;
 	
 	@Override
@@ -20,7 +24,8 @@ public class MainActivity extends Activity{
 		setContentView(R.layout.activity_main);
 		userNameText = (EditText)findViewById(R.id.editText1);
 		passwordText = (EditText)findViewById(R.id.editText2);
-	
+		errorText = (EditText)findViewById(R.id.editText3);
+		
 		loginButton = (Button)findViewById(R.id.button1);
 		loginButton.setOnClickListener((android.view.View.OnClickListener) this);
 		
@@ -39,9 +44,23 @@ public class MainActivity extends Activity{
 		
 		switch(v.getId()){
 		case R.id.button1:
-			//implement database connection
+			try {
+				ResultSet users = DatabaseQueryer.connectToAndQueryDatabase("SELECT * FROM users u WHERE u.username = " + name + "AND u.password = " + pass);
+				if(users.getMetaData().getColumnCount() != 1){
+					errorText.setText("Error: Incorrect Username/Password");
+					passwordText.setText("");
+				}
+				else{
+					//TODO go to next screen
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 			break;
-		}
+			//implement any other buttons needed
+		} // end switch
 	}
 
 
