@@ -2,6 +2,8 @@ package com.example.darkroom;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -19,34 +21,50 @@ public class HomeActivity extends Activity {
 	private TextView reviewsAllowed;
 	private TextView guestBookAllowed;
 	private TextView commentsAllowed;
+	
+	private List<EditText> etList;
+	private List<TextView> tvList;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_home);
 		
 		equipmentText = (EditText)findViewById(R.id.homeEquipmentText);
 		styleText = (EditText)findViewById(R.id.homeStyleText);
 		websiteText = (EditText)findViewById(R.id.homeWebsiteText);
 		workText = (EditText) findViewById(R.id.homeWorkInterestText);
-		setEditText(equipmentText);
-		setEditText(styleText);
-		setEditText(websiteText);
-		setEditText(workText);
+		
+		etList = new LinkedList<EditText>();
+		etList.add(equipmentText);
+		etList.add(styleText);
+		etList.add(websiteText);
+		etList.add(workText);
+		
+		for(EditText item : etList){
+			setEditText(item);
+		}
 		
 		forHire = (TextView)findViewById(R.id.homeForHireText);
 		reviewsAllowed = (TextView)findViewById(R.id.homeAllowReviewsText);
 		guestBookAllowed = (TextView)findViewById(R.id.homeAllowGuestbookText);
 		commentsAllowed = (TextView)findViewById(R.id.homeAllowCommentsText);
 		
+		tvList = new LinkedList<TextView>();
+		tvList.add(forHire);
+		tvList.add(reviewsAllowed);
+		tvList.add(guestBookAllowed);
+		tvList.add(commentsAllowed);
+		
 		try {
-			setTextView(forHire);
-			setTextView(reviewsAllowed);
-			setTextView(guestBookAllowed);
-			setTextView(commentsAllowed);
+			for(TextView textItem: tvList){
+				setTextView(textItem);
+				
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		setContentView(R.layout.activity_home);
 	}
 
 	private void setEditText(EditText et) {
