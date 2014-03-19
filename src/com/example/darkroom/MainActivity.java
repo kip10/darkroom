@@ -12,56 +12,65 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
-public class MainActivity extends Activity{
+public class MainActivity extends Activity {
 	EditText userNameText;
 	EditText passwordText;
-	EditText errorText;
+	TextView errorText;
 	Button loginButton;
-	
+	Button regButton;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		userNameText = (EditText)findViewById(R.id.userTextField);
-		passwordText = (EditText)findViewById(R.id.passwordTextField);
-		errorText = (EditText)findViewById(R.id.statusTextField);
-		
-		loginButton = (Button)findViewById(R.id.button1);
+		userNameText = (EditText) findViewById(R.id.userTextField);
+		passwordText = (EditText) findViewById(R.id.passwordTextField);
+		errorText = (EditText) findViewById(R.id.statusText);
+
+		loginButton = (Button) findViewById(R.id.registerButtonRegister);
 		loginButton.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) { // go to next screen
 				String name = userNameText.getText().toString();
 				String pass = passwordText.getText().toString();
-				
-				switch(v.getId()){
-				case R.id.button1:
-					try {
-						ResultSet users = DatabaseQueryer.connectToAndQueryDatabase("SELECT * FROM users u WHERE u.username = " + name + "AND u.password = " + pass);
-						if(users.getMetaData().getColumnCount() != 1){
-							errorText.setText("Error: Incorrect Username/Password");
-							passwordText.setText("");
-						}
-						else{
-							Intent goToHomePage = new Intent(v.getContext(), HomeActivity.class);
-							startActivityForResult(goToHomePage, 0);
-							
-						}
-					} catch (SQLException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+
+				try {
+					ResultSet users = DatabaseQueryer
+							.connectToAndQueryDatabase("SELECT * FROM users u WHERE u.username = "
+									+ name + "AND u.password = " + pass);
+					if (users.getMetaData().getColumnCount() != 1) {
+						errorText.setText("Error: Incorrect Username/Password");
+						passwordText.setText("");
+					} else {
+						Intent goToHomePage = new Intent(v.getContext(),
+								HomeActivity.class);
+						startActivityForResult(goToHomePage, 0);
+
 					}
-					
-					break;
-					//implement any other buttons needed
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+
+					// implement any other buttons needed
 				} // end switch
 			}
 
-				
-			
+		}); // end implementation for clicking on Login button
+
+		regButton = (Button) findViewById(R.id.registerButton);
+		regButton.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+				Intent goToRegPage = new Intent(view.getContext(),
+						RegisterActivity.class);
+				startActivityForResult(goToRegPage, 0);
+			}
 		});
-		
+
 	}
 
 	@Override
@@ -70,8 +79,5 @@ public class MainActivity extends Activity{
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
-
-		
 
 }
