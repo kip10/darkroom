@@ -46,7 +46,7 @@ public class RegisterActivity extends Activity {
 					else{
 						DatabaseQueryer.connectToAndUpdateDatabase("INSERT INTO Users(email, username, password)"
 								+ "VALUES('" +email+ "', '"+ name+ "', '"+password + ");");
-						
+						MainActivity.setUserName(name);
 						Intent goToRegPage = new Intent(v.getContext(),
 								RegisterActivity.class);
 						startActivityForResult(goToRegPage, 0);

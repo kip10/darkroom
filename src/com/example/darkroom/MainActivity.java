@@ -20,7 +20,8 @@ public class MainActivity extends Activity {
 	TextView errorText;
 	Button loginButton;
 	Button regButton;
-
+	
+	private static String userName;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -45,6 +46,7 @@ public class MainActivity extends Activity {
 						errorText.setText("Error: Incorrect Username/Password");
 						passwordText.setText("");
 					} else {
+						userName = name;
 						Intent goToHomePage = new Intent(v.getContext(),
 								HomeActivity.class);
 						startActivityForResult(goToHomePage, 0);
@@ -80,4 +82,10 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
+	public static String getUserName(){
+		return userName;
+	}
+	public static void setUserName(String name){
+		userName = name;
+	}
 }
