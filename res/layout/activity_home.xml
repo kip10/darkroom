@@ -41,14 +41,13 @@
                     android:id="@+id/textView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="\tFor Hire:"
+                    android:text="\tFor Hire:\t"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
+                <CheckBox
                     android:id="@+id/homeForHireText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="\tTest"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
             </LinearLayout>
 
@@ -65,14 +64,13 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="\tAllow Reviews:"
+                    android:text="\tAllow Reviews:\t"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
+                <CheckBox
                     android:id="@+id/homeAllowReviewsText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="\tTest"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
             </LinearLayout>
 
@@ -89,14 +87,13 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="\tAllow Guestbook:"
+                    android:text="\tAllow Guestbook:\t"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
+                <CheckBox
                     android:id="@+id/homeAllowGuestbookText"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="\tTest"
+                    android:layout_height="wrap_content"         
                     android:textAppearance="?android:attr/textAppearanceSmall" />
             </LinearLayout>
 
@@ -113,14 +110,13 @@
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="\tAllow Comments:"
+                    android:text="\tAllow Comments:\t"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
+                <CheckBox
                     android:id="@+id/homeAllowCommentsText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="\tTest"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
             </LinearLayout>
 

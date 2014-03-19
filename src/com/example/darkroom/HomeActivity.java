@@ -8,6 +8,7 @@ import java.util.List;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -17,13 +18,13 @@ public class HomeActivity extends Activity {
 	private EditText websiteText;
 	private EditText workText;
 	
-	private TextView forHire;
-	private TextView reviewsAllowed;
-	private TextView guestBookAllowed;
-	private TextView commentsAllowed;
+	private CheckBox forHire;
+	private CheckBox reviewsAllowed;
+	private CheckBox guestBookAllowed;
+	private CheckBox commentsAllowed;
 	
 	private List<EditText> etList;
-	private List<TextView> tvList;
+	private List<CheckBox> tvList;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -43,20 +44,20 @@ public class HomeActivity extends Activity {
 			setEditText(item);
 		}
 		
-		forHire = (TextView)findViewById(R.id.homeForHireText);
-		reviewsAllowed = (TextView)findViewById(R.id.homeAllowReviewsText);
-		guestBookAllowed = (TextView)findViewById(R.id.homeAllowGuestbookText);
-		commentsAllowed = (TextView)findViewById(R.id.homeAllowCommentsText);
+		forHire = (CheckBox)findViewById(R.id.homeForHireText);
+		reviewsAllowed = (CheckBox)findViewById(R.id.homeAllowReviewsText);
+		guestBookAllowed = (CheckBox)findViewById(R.id.homeAllowGuestbookText);
+		commentsAllowed = (CheckBox)findViewById(R.id.homeAllowCommentsText);
 		
-		tvList = new LinkedList<TextView>();
+		tvList = new LinkedList<CheckBox>();
 		tvList.add(forHire);
 		tvList.add(reviewsAllowed);
 		tvList.add(guestBookAllowed);
 		tvList.add(commentsAllowed);
 		
 		try {
-			for(TextView textItem: tvList){
-				setTextView(textItem);
+			for(CheckBox textItem: tvList){
+				setCheckBox(textItem);
 				
 			}
 		} catch (SQLException e) {
@@ -85,14 +86,14 @@ public class HomeActivity extends Activity {
 		}
 	}
 	
-	private void setTextView(TextView tv) throws SQLException {
+	private void setCheckBox(CheckBox cb) throws SQLException {
 		ResultSet rs;
-		switch(tv.getId()){
+		switch(cb.getId()){
 		case R.id.homeForHireText:
 			rs = DatabaseQueryer.connectToAndQueryDatabase("SELECT for_hire FROM users u WHERE "
 					+ "u.username = " +MainActivity.getUserName());
-			if(rs.getByte("for_hire") == 0) tv.setText("No");
-			else tv.setText("Yes");
+			if(rs.getByte("for_hire") == 0) cb.setChecked(false);
+			else cb.setChecked(true);
 			break;
 		//TODO: IMPLEMENT QUERYING OTHER FIELDS AS WELL
 		}
