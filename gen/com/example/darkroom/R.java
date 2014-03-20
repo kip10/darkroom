@@ -24,7 +24,8 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001c;
+        public static final int action_settings=0x7f080020;
+        public static final int button_selectpic=0x7f08001d;
         public static final int homeAboutText=0x7f08000c;
         public static final int homeAllowCommentsText=0x7f080008;
         public static final int homeAllowGuestbookText=0x7f080006;
@@ -34,6 +35,8 @@ public final class R {
         public static final int homeStyleText=0x7f08000e;
         public static final int homeWebsiteText=0x7f080012;
         public static final int homeWorkInterestText=0x7f080010;
+        public static final int imageView_pic=0x7f08001c;
+        public static final int messageText=0x7f08001f;
         public static final int passwordTextField=0x7f080014;
         public static final int registerButton=0x7f080017;
         public static final int registerButtonRegister=0x7f080015;
@@ -52,17 +55,20 @@ public final class R {
         public static final int textView7=0x7f08000d;
         public static final int textView8=0x7f08000f;
         public static final int textView9=0x7f080011;
+        public static final int uploadButton=0x7f08001e;
         public static final int userTextField=0x7f080013;
     }
     public static final class layout {
         public static final int activity_home=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_register=0x7f030002;
+        public static final int activity_upload=0x7f030003;
     }
     public static final class menu {
         public static final int home=0x7f070000;
         public static final int main=0x7f070001;
         public static final int register=0x7f070002;
+        public static final int upload=0x7f070003;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -72,6 +78,7 @@ public final class R {
         public static final int register=0x7f050005;
         public static final int title_activity_home=0x7f050006;
         public static final int title_activity_register=0x7f050007;
+        public static final int title_activity_upload=0x7f050008;
         public static final int userName=0x7f050003;
     }
     public static final class style {

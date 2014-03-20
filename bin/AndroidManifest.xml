@@ -30,6 +30,10 @@
             android:name="com.example.darkroom.RegisterActivity"
             android:label="@string/title_activity_register" >
         </activity>
+        <activity
+            android:name="com.example.darkroom.UploadActivity"
+            android:label="@string/title_activity_upload" >
+        </activity>
     </application>
 
 </manifest>

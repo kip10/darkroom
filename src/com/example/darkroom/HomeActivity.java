@@ -96,6 +96,7 @@ public class HomeActivity extends Activity {
 			else cb.setChecked(true);
 			break;
 		//TODO: IMPLEMENT QUERYING OTHER FIELDS AS WELL
+			//after the PHP gets implemented
 		}
 	}
 
