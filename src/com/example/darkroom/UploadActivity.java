@@ -23,12 +23,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-  /**
-   * Code outline taken from http://sunil-android.blogspot.com/2013/09/file-upload-on-php-server-in-android.html
-   * However it was/will be edited to match our needs for uploading files to galleries, etc.
-   * @author Eric
-   *
-   */
+
 public class UploadActivity extends Activity implements OnClickListener{
      
     private TextView messageText;
