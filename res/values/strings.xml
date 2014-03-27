@@ -10,5 +10,6 @@
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_upload">UploadActivity</string>
+    <string name="title_activity_feed">FeedActivity</string>
 
 </resources>

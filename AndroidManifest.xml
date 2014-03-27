@@ -34,6 +34,10 @@
             android:name="com.example.darkroom.UploadActivity"
             android:label="@string/title_activity_upload" >
         </activity>
+        <activity
+            android:name="com.example.darkroom.FeedActivity"
+            android:label="@string/title_activity_feed" >
+        </activity>
     </application>
 
 </manifest>
