@@ -9,7 +9,8 @@ public class FeedActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_feed);
+		//setContentView(R.layout.activity_feed);
+		//commented out because view needs to be dynamic
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		userNameText = (EditText) findViewById(R.id.userTextField);
 		passwordText = (EditText) findViewById(R.id.passwordTextField);
-		errorText = (EditText) findViewById(R.id.statusText);
+		errorText = (TextView) findViewById(R.id.statusText);
 
 		loginButton = (Button) findViewById(R.id.registerButtonRegister);
 		loginButton.setOnClickListener(new View.OnClickListener() {
