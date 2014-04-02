@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
 									+ name + "AND u.password = " + pass);
 					if (users.getMetaData().getColumnCount() != 1) {
 						errorText.setText("Error: Incorrect Username/Password");
-						errorText.sh
+						
 						passwordText.setText("");
 					} else {
 						userName = name;
