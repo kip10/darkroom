@@ -8,16 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".RegisterActivity" >
 
-    <EditText
-        android:id="@+id/registerPassText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView3"
-        android:layout_marginTop="16dp"
-        android:ems="10" />
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -82,5 +72,17 @@
         android:layout_marginBottom="61dp"
         android:text=""
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/registerPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/registerButtonRegister"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPassword" >
+
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>

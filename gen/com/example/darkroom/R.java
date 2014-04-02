@@ -40,11 +40,11 @@ public final class R {
         public static final int passwordTextField=0x7f080014;
         public static final int registerButton=0x7f080017;
         public static final int registerButtonRegister=0x7f080015;
-        public static final int registerEmailText=0x7f08001a;
-        public static final int registerPassText=0x7f080018;
-        public static final int registerUserText=0x7f080019;
+        public static final int registerEmailText=0x7f080019;
+        public static final int registerPasswordText=0x7f08001b;
+        public static final int registerUserText=0x7f080018;
         public static final int statusText=0x7f080016;
-        public static final int statusTextView=0x7f08001b;
+        public static final int statusTextView=0x7f08001a;
         public static final int textView0=0x7f080000;
         public static final int textView1=0x7f080001;
         public static final int textView2=0x7f080003;

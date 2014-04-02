@@ -24,7 +24,7 @@ public class RegisterActivity extends Activity {
 		setContentView(R.layout.activity_register);
 		
 		uName = (EditText) findViewById(R.id.registerUserText);
-		pass = (EditText)findViewById(R.id.registerPassText);
+		pass = (EditText)findViewById(R.id.registerPasswordText);
 		eMail = (EditText)findViewById(R.id.registerEmailText);
 	
 		registerButton = (Button)findViewById(R.id.registerButtonRegister);
