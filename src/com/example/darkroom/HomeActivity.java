@@ -41,7 +41,12 @@ public class HomeActivity extends Activity {
 		etList.add(workText);
 		
 		for(EditText item : etList){
-			setEditText(item);
+			try {
+				setEditText(item);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		forHire = (CheckBox)findViewById(R.id.homeForHireText);
@@ -63,12 +68,15 @@ public class HomeActivity extends Activity {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 		setContentView(R.layout.activity_home);
 	}
 
-	private void setEditText(EditText et) {
+	private void setEditText(EditText et) throws Exception{
 		ResultSet rs;
 		switch(et.getId()){
 		case R.id.homeEquipmentText:
@@ -86,7 +94,7 @@ public class HomeActivity extends Activity {
 		}
 	}
 	
-	private void setCheckBox(CheckBox cb) throws SQLException {
+	private void setCheckBox(CheckBox cb) throws SQLException, Exception {
 		ResultSet rs;
 		switch(cb.getId()){
 		case R.id.homeForHireText:

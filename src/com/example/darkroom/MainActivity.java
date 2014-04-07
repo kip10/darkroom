@@ -39,9 +39,15 @@ public class MainActivity extends Activity {
 				String pass = passwordText.getText().toString();
 
 				try {
-					ResultSet users = DatabaseQueryer
-							.connectToAndQueryDatabase("SELECT * FROM users u WHERE u.username = "
-									+ name + "AND u.password = " + pass);
+					ResultSet users = null;
+					try {
+						users = DatabaseQueryer
+								.connectToAndQueryDatabase("SELECT * FROM users u WHERE u.username = "
+										+ name + "AND u.password = " + pass);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					if (users.getMetaData().getColumnCount() != 1) {
 						errorText.setText("Error: Incorrect Username/Password");
 						
