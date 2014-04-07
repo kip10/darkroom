@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class DatabaseQueryer {	
 	private static String hostName = "localhost";
@@ -17,9 +16,7 @@ public class DatabaseQueryer {
 	public static ResultSet connectToAndQueryDatabase(String query) throws SQLException, Exception {
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		Connection dbConn;
-		dbConn = DriverManager.getConnection("jdbc:mysql://" + hostName + ":"
-				+ portNumber + "/" + dbName);
+		Connection dbConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dr0", "root", "newpwd");
 		PreparedStatement stmt = dbConn.prepareStatement(query);
 		return stmt.executeQuery(query);
 	}
@@ -27,9 +24,7 @@ public class DatabaseQueryer {
 	public static void connectToAndUpdateDatabase(String statement) throws SQLException, Exception {
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		Connection dbConn;
-		dbConn = DriverManager.getConnection("jdbc:mysql://" + hostName + ":"
-				+ portNumber + "/" + dbName);
+		Connection dbConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dr0", "root", "newpwd");
 		PreparedStatement stmt = dbConn.prepareStatement(statement);
 		stmt.executeUpdate(statement);
 	}
