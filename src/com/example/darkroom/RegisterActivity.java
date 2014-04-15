@@ -68,7 +68,7 @@ public class RegisterActivity extends Activity {
 				String email = eMail.getText().toString();
 			
 				if(!passwordConfirmed.equals(password)){
-					statusText.setText("Error: Passwords Do Not Match!");
+					Toast.makeText(getBaseContext(), "Error: Passwords Don't Match", Toast.LENGTH_LONG).show();
 					return;
 				}
 				

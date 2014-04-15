@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="101dp"
         android:layout_height="wrap_content"
-        android:text="@string/userName" />
+        android:text="E-Mail:" />
 
     <EditText
         android:id="@+id/userTextField"
