@@ -1,8 +1,14 @@
+
 package com.example.darkroom;
 
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -36,6 +42,7 @@ public class DatabaseQueryer {
 			HttpPost httppost = new HttpPost(
 					"http://10.0.2.2/EECS395/"+phpFileName+ ".php");
 			HttpResponse response = httpclient.execute(httppost);
+			
 			HttpEntity entity = response.getEntity();
 			isr = entity.getContent();
 		} catch (Exception e) {
@@ -74,4 +81,49 @@ public class DatabaseQueryer {
 
 	}
 
+	public void gay() throws IOException{
+		URL url = new URL("http://localhost/CD/user/test");
+	    String result = "";
+	    String data = "fName=" + URLEncoder.encode("Atli", "UTF-8");
+	    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+	    try {
+
+	        connection.setDoInput(true);
+	        connection.setDoOutput(true);
+	        connection.setUseCaches(false);
+	        connection.setRequestMethod("POST");
+	        connection.setRequestProperty("Content-Type",
+	                "application/x-www-form-urlencoded");
+
+	        // Send the POST data
+	        DataOutputStream dataOut = new DataOutputStream(
+	                connection.getOutputStream());
+	        dataOut.writeBytes(data);
+	        dataOut.flush();
+	        dataOut.close();
+
+	        BufferedReader in = null;
+	        try {
+	            String line;
+	            in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+	            while ((line = in.readLine()) != null) {
+	                result += line;
+	            }
+	        } finally {
+	            if (in != null) {
+	                in.close();
+	            }
+	        }
+	        String g;
+	        while ((g = in.readLine()) != null) {
+	            result += g;
+	        }
+	        in.close();
+
+	    } finally {
+	        connection.disconnect();
+	        System.out.println(result);
+	    }
+	}
 }
+

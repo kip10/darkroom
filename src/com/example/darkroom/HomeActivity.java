@@ -77,6 +77,7 @@ public class HomeActivity extends Activity {
 	}
 
 	private void setEditText(EditText et) throws Exception{
+		/*
 		ResultSet rs;
 		switch(et.getId()){
 		case R.id.homeEquipmentText:
@@ -91,11 +92,11 @@ public class HomeActivity extends Activity {
 			break;
 		//TODO: IMPLEMENT THE QUERYING FIELDS FOR THE OTHER EDITTEXTS
 		
-		}
+		}*/
 	}
 	
 	private void setCheckBox(CheckBox cb) throws SQLException, Exception {
-		ResultSet rs;
+		/*ResultSet rs;
 		switch(cb.getId()){
 		case R.id.homeForHireText:
 			rs = DatabaseQueryer.connectToAndQueryDatabase("SELECT for_hire FROM users u WHERE "
@@ -105,7 +106,7 @@ public class HomeActivity extends Activity {
 			break;
 		//TODO: IMPLEMENT QUERYING OTHER FIELDS AS WELL
 			//after the PHP gets implemented
-		}
+		}*/
 	}
 
 	@Override

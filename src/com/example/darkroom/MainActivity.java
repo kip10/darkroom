@@ -1,14 +1,21 @@
 package com.example.darkroom;
 
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 
 import android.os.Bundle;
@@ -41,16 +48,7 @@ public class MainActivity extends Activity {
 		passwordText = (EditText) findViewById(R.id.passwordTextField);
 		errorText = (TextView) findViewById(R.id.statusText);
 
-		try {
-			HttpClient httpclient = new DefaultHttpClient();
-			HttpPost httppost = new HttpPost(
-					"http://10.0.2.2/EECS395/login.php");
-			HttpResponse response = httpclient.execute(httppost);
-			HttpEntity entity = response.getEntity();
-			isr = entity.getContent();
-		} catch (Exception e) {
-			Log.e("log_tag", "Error in http connection " + e.toString());
-		}
+		
 		loginButton = (Button) findViewById(R.id.registerButtonRegister);
 		loginButton.setOnClickListener(new View.OnClickListener() {
 
@@ -59,25 +57,54 @@ public class MainActivity extends Activity {
 				String name = userNameText.getText().toString();
 				String pass = passwordText.getText().toString();
 
-				JSONArray users = new JSONArray();
+				String result = "";
+				InputStream isr = null;
 				try {
-					users = DatabaseQueryer.getData("login");
-
+					HttpClient httpclient = new DefaultHttpClient();
+					HttpPost httppost = new HttpPost(
+							"http://54.201.1.107/php/login.php"); 
+					List<NameValuePair> params = new ArrayList<NameValuePair>(2);
+					params.add(new BasicNameValuePair("email", "darkroom"));
+					params.add(new BasicNameValuePair("pass", "darkroom"));
+					
+					httppost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
+					HttpResponse response = httpclient.execute(httppost);
+						
+						
+					HttpEntity entity = response.getEntity();
+					isr = entity.getContent();
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					Log.e("log_tag", "Error in http connection " + e.toString());
+					
 				}
-				if (users.length() != 1) {
-					errorText.setText("Error: Incorrect Username/Password");
-
-					passwordText.setText("");
-				} else {
-					userName = name;
-					Intent goToHomePage = new Intent(v.getContext(),
-							HomeActivity.class);
-					startActivityForResult(goToHomePage, 0);
-
+				// convert response to string
+				try {
+					
+					BufferedReader reader = new BufferedReader(new InputStreamReader(
+							isr, "iso-8859-1"), 8);
+					StringBuilder sb = new StringBuilder();
+					String line = reader.readLine();
+					sb.append(line);
+						result = sb.toString();
+				} catch (Exception e) {
+					Log.e("log_tag", "Error  converting result " + e.toString());
 				}
+
+					// parse json data
+					try {
+						if(result == "true"){
+							Intent goToHomePage = new Intent(v.getContext(),
+									HomeActivity.class);
+							startActivityForResult(goToHomePage, 0);
+						}
+						else{
+							errorText.setText("Error: Incorrect Username/Password");
+						}
+
+					} catch (Exception e) {
+						// TODO: handle exception
+						Log.e("log_tag", "Error Parsing Data " + e.toString());
+					}
 
 			}
 
