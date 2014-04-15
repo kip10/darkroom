@@ -24,8 +24,8 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080024;
-        public static final int button_selectpic=0x7f080021;
+        public static final int action_settings=0x7f080025;
+        public static final int button_selectpic=0x7f080022;
         public static final int feedHomeTab=0x7f080000;
         public static final int feedProfileTab=0x7f080001;
         public static final int feedSearchTab=0x7f080002;
@@ -39,13 +39,14 @@ public final class R {
         public static final int homeStyleText=0x7f080012;
         public static final int homeWebsiteText=0x7f080016;
         public static final int homeWorkInterestText=0x7f080014;
-        public static final int imageView_pic=0x7f080020;
-        public static final int messageText=0x7f080023;
+        public static final int imageView_pic=0x7f080021;
+        public static final int messageText=0x7f080024;
         public static final int passwordTextField=0x7f080018;
         public static final int registerButton=0x7f08001b;
         public static final int registerButtonRegister=0x7f080019;
         public static final int registerEmailText=0x7f08001d;
-        public static final int registerPasswordText=0x7f08001f;
+        public static final int registerPassConfirmText=0x7f08001f;
+        public static final int registerPassText=0x7f080020;
         public static final int registerUserText=0x7f08001c;
         public static final int statusText=0x7f08001a;
         public static final int statusTextView=0x7f08001e;
@@ -59,7 +60,7 @@ public final class R {
         public static final int textView7=0x7f080011;
         public static final int textView8=0x7f080013;
         public static final int textView9=0x7f080015;
-        public static final int uploadButton=0x7f080022;
+        public static final int uploadButton=0x7f080023;
         public static final int userTextField=0x7f080017;
     }
     public static final class layout {

@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -16,6 +17,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
+
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -99,9 +101,9 @@ public class MainActivity extends Activity {
 				// parse json data
 				try {
 					if (result.equals("true")) {
-						Intent goToRegPage = new Intent(v.getContext(),
-								RegisterActivity.class);
-						startActivityForResult(goToRegPage, 0);
+						Intent goToHomePage = new Intent(v.getContext(),
+								HomeActivity.class);
+						startActivityForResult(goToHomePage, 0);
 					} else {
 						errorText.setText("Error: Incorrect Username/Password");
 					}
