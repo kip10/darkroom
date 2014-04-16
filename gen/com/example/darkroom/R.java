@@ -24,7 +24,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080025;
+        public static final int action_settings=0x7f080026;
         public static final int button_selectpic=0x7f080022;
         public static final int feedHomeTab=0x7f080000;
         public static final int feedProfileTab=0x7f080001;
@@ -51,7 +51,6 @@ public final class R {
         public static final int statusText=0x7f08001a;
         public static final int statusTextView=0x7f08001e;
         public static final int textView0=0x7f080004;
-        public static final int textView1=0x7f080005;
         public static final int textView2=0x7f080007;
         public static final int textView3=0x7f080009;
         public static final int textView4=0x7f08000b;
@@ -61,6 +60,8 @@ public final class R {
         public static final int textView8=0x7f080013;
         public static final int textView9=0x7f080015;
         public static final int uploadButton=0x7f080023;
+        public static final int userHomeAvatar=0x7f080025;
+        public static final int userHomeUsername=0x7f080005;
         public static final int userTextField=0x7f080017;
     }
     public static final class layout {
@@ -69,6 +70,7 @@ public final class R {
         public static final int activity_main=0x7f030002;
         public static final int activity_register=0x7f030003;
         public static final int activity_upload=0x7f030004;
+        public static final int activity_user_home=0x7f030005;
     }
     public static final class menu {
         public static final int feed=0x7f070000;
@@ -76,6 +78,7 @@ public final class R {
         public static final int main=0x7f070002;
         public static final int register=0x7f070003;
         public static final int upload=0x7f070004;
+        public static final int user_home=0x7f070005;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -87,6 +90,7 @@ public final class R {
         public static final int title_activity_home=0x7f050006;
         public static final int title_activity_register=0x7f050007;
         public static final int title_activity_upload=0x7f050008;
+        public static final int title_activity_user_home=0x7f05000a;
         public static final int userName=0x7f050003;
     }
     public static final class style {

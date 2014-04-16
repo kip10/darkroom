@@ -108,7 +108,7 @@ public class RegisterActivity extends Activity {
 				
 				try {
 					if (result.equals("false")) {
-						statusText.setText("Error: The E-mail Address is Already Registered!");
+						Toast.makeText(getBaseContext(), "Error: The E-mail Address is Already Registered!",Toast.LENGTH_LONG).show();
 						
 					} else {
 						Intent goToHomePage = new Intent(v.getContext(),
