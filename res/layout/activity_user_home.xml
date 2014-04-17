@@ -8,25 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".UserHomeActivity" >
 
-    <ImageView
-        android:id="@+id/userHomeAvatar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/ic_launcher" />
-
-    <TextView
-        android:id="@+id/userHomeUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/userHomeAvatar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <Button
         android:id="@+id/userHomeUploadsButton"
         android:layout_width="wrap_content"
@@ -65,5 +46,29 @@
         android:layout_marginTop="28dp"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/userHomeAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/userHomeUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/userHomeAvatar"
+        android:layout_alignRight="@+id/userHomeFollowingButton"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <CheckBox
+        android:id="@+id/userHomeFollowCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/userHomeUsername"
+        android:text="Follow" />
 
 </RelativeLayout>

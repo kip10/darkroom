@@ -24,7 +24,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f08002a;
+        public static final int action_settings=0x7f08002b;
         public static final int button_selectpic=0x7f080022;
         public static final int feedHomeTab=0x7f080000;
         public static final int feedProfileTab=0x7f080001;
@@ -60,11 +60,12 @@ public final class R {
         public static final int textView8=0x7f080013;
         public static final int textView9=0x7f080015;
         public static final int uploadButton=0x7f080023;
-        public static final int userHomeAboutTextView=0x7f080029;
-        public static final int userHomeAvatar=0x7f080025;
-        public static final int userHomeFollowersButton=0x7f080027;
-        public static final int userHomeFollowingButton=0x7f080028;
-        public static final int userHomeUploadsButton=0x7f080026;
+        public static final int userHomeAboutTextView=0x7f080028;
+        public static final int userHomeAvatar=0x7f080029;
+        public static final int userHomeFollowCheck=0x7f08002a;
+        public static final int userHomeFollowersButton=0x7f080026;
+        public static final int userHomeFollowingButton=0x7f080027;
+        public static final int userHomeUploadsButton=0x7f080025;
         public static final int userHomeUsername=0x7f080005;
         public static final int userTextField=0x7f080017;
     }
