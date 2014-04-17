@@ -26,8 +26,7 @@ public final class R {
     public static final class id {
         public static final int FollowingBackButton=0x7f080004;
         public static final int FollowingList=0x7f080005;
-        public static final int action_settings=0x7f080030;
-        public static final int button_selectpic=0x7f080024;
+        public static final int action_settings=0x7f080031;
         public static final int feedHomeTab=0x7f080000;
         public static final int feedProfileTab=0x7f080001;
         public static final int feedSearchTab=0x7f080002;
@@ -41,11 +40,9 @@ public final class R {
         public static final int homeStyleText=0x7f080014;
         public static final int homeWebsiteText=0x7f080018;
         public static final int homeWorkInterestText=0x7f080016;
-        public static final int imageView_pic=0x7f080023;
-        public static final int itemLayoutAvatar=0x7f08002e;
-        public static final int itemLayoutFollowingCheckBox=0x7f08002d;
-        public static final int itemLayoutUserName=0x7f08002f;
-        public static final int messageText=0x7f080026;
+        public static final int itemLayoutAvatar=0x7f08002c;
+        public static final int itemLayoutFollowingCheckBox=0x7f08002b;
+        public static final int itemLayoutUserName=0x7f08002d;
         public static final int passwordTextField=0x7f08001a;
         public static final int registerButton=0x7f08001d;
         public static final int registerButtonRegister=0x7f08001b;
@@ -56,7 +53,6 @@ public final class R {
         public static final int statusText=0x7f08001c;
         public static final int statusTextView=0x7f080020;
         public static final int textView0=0x7f080006;
-        public static final int textView2=0x7f080009;
         public static final int textView3=0x7f08000b;
         public static final int textView4=0x7f08000d;
         public static final int textView5=0x7f08000f;
@@ -64,13 +60,18 @@ public final class R {
         public static final int textView7=0x7f080013;
         public static final int textView8=0x7f080015;
         public static final int textView9=0x7f080017;
-        public static final int uploadButton=0x7f080025;
-        public static final int userHomeAboutTextView=0x7f08002a;
-        public static final int userHomeAvatar=0x7f08002b;
-        public static final int userHomeFollowCheck=0x7f08002c;
-        public static final int userHomeFollowersButton=0x7f080028;
-        public static final int userHomeFollowingButton=0x7f080029;
-        public static final int userHomeUploadsButton=0x7f080027;
+        public static final int uploadBackButton=0x7f080023;
+        public static final int uploadLayoutPicture=0x7f08002e;
+        public static final int uploadLayoutRating=0x7f080030;
+        public static final int uploadLayoutTitle=0x7f080009;
+        public static final int uploadLayoutUserName=0x7f08002f;
+        public static final int uploadList=0x7f080024;
+        public static final int userHomeAboutTextView=0x7f080028;
+        public static final int userHomeAvatar=0x7f080029;
+        public static final int userHomeFollowCheck=0x7f08002a;
+        public static final int userHomeFollowersButton=0x7f080026;
+        public static final int userHomeFollowingButton=0x7f080027;
+        public static final int userHomeUploadsButton=0x7f080025;
         public static final int userHomeUsername=0x7f080007;
         public static final int userTextField=0x7f080019;
     }
@@ -80,9 +81,10 @@ public final class R {
         public static final int activity_home=0x7f030002;
         public static final int activity_main=0x7f030003;
         public static final int activity_register=0x7f030004;
-        public static final int activity_upload=0x7f030005;
+        public static final int activity_uploads=0x7f030005;
         public static final int activity_user_home=0x7f030006;
         public static final int item_layout=0x7f030007;
+        public static final int upload_layout=0x7f030008;
     }
     public static final class menu {
         public static final int feed=0x7f070000;

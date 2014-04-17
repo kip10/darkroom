@@ -61,7 +61,7 @@
                 android:paddingTop="@dimen/activity_vertical_margin" >
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/uploadLayoutTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="\tAllow Reviews:\t"
