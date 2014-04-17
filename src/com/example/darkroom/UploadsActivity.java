@@ -10,5 +10,6 @@ public class UploadsActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		TextView textView = new TextView(this);
 		textView.setText("Uploads");
+		setContentView(textView);
 	}
 }

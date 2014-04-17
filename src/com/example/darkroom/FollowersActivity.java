@@ -10,5 +10,6 @@ public class FollowersActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		TextView textView = new TextView(this);
 		textView.setText("Followers");
+		setContentView(textView);
 	}
 }
