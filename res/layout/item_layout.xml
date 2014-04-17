@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <CheckBox
+        android:id="@+id/itemLayoutFollowingCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="29dp"
+        android:text="Following" />
+
+    <ImageView
+        android:id="@+id/itemLayoutAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/itemLayoutUserName"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:adjustViewBounds="false"
+        android:maxHeight="40dp"
+        android:maxWidth="40dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/itemLayoutUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/itemLayoutFollowingCheckBox"
+        android:layout_alignBottom="@+id/itemLayoutFollowingCheckBox"
+        android:layout_marginRight="22dp"
+        android:layout_toLeftOf="@+id/itemLayoutFollowingCheckBox"
+        android:text="UserName"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
