@@ -8,9 +8,68 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ReviewsActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/reviewsBackButton"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Back" />
+
+    <ImageView
+        android:id="@+id/reviewsImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/reviewsBackButton"
+        android:layout_centerHorizontal="true"
+        android:maxHeight="140dp"
+        android:maxWidth="140dp"
+        android:src="@drawable/ic_launcher" />
+
+    <ListView
+        android:id="@+id/reviewsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reviewsBackButton"
+        android:layout_below="@+id/reviewsBackButton"
+        android:layout_marginTop="96dp" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/reviewsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reviewsImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="Title"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/reviewsUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reviewsTitle"
+        android:layout_centerHorizontal="true"
+        android:text="User"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/reviewsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/reviewsUserName"
+        android:layout_alignParentRight="true"
+        android:text="Following" />
+
+    <TextView
+        android:id="@+id/reviewsScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reviewsBackButton"
+        android:layout_alignTop="@+id/reviewsTitle"
+        android:text="9.9"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

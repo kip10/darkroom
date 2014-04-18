@@ -52,6 +52,17 @@ public class RatingActivity extends Activity {
 		});
 		
 		userName = (TextView)findViewById(R.id.ratingUserName);
+		userName.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent goToUserHome = new Intent(v.getContext(),
+						UserHomeActivity.class);
+				startActivityForResult(goToUserHome, 0);
+				
+			}
+		});
+		
 		score0 = (TextView)findViewById(R.id.ratingRatingScore0);
 		score1 = (TextView)findViewById(R.id.ratingRatingScore1);
 		score2 = (TextView)findViewById(R.id.ratingRatingScore2);

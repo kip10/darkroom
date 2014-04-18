@@ -26,8 +26,8 @@ public final class R {
     public static final class id {
         public static final int FollowingBackButton=0x7f080000;
         public static final int FollowingList=0x7f080001;
-        public static final int action_settings=0x7f080041;
-        public static final int checkBox1=0x7f080040;
+        public static final int action_settings=0x7f080048;
+        public static final int checkBox1=0x7f080047;
         public static final int homeAboutText=0x7f08000e;
         public static final int homeAllowCommentsText=0x7f08000a;
         public static final int homeAllowGuestbookText=0x7f080008;
@@ -37,9 +37,9 @@ public final class R {
         public static final int homeStyleText=0x7f080010;
         public static final int homeWebsiteText=0x7f080014;
         public static final int homeWorkInterestText=0x7f080012;
-        public static final int itemLayoutAvatar=0x7f08003b;
-        public static final int itemLayoutFollowingCheckBox=0x7f08003a;
-        public static final int itemLayoutUserName=0x7f08003c;
+        public static final int itemLayoutAvatar=0x7f080042;
+        public static final int itemLayoutFollowingCheckBox=0x7f080041;
+        public static final int itemLayoutUserName=0x7f080043;
         public static final int passwordTextField=0x7f080016;
         public static final int ratingBackButton=0x7f08001d;
         public static final int ratingPicture=0x7f08001a;
@@ -67,6 +67,13 @@ public final class R {
         public static final int registerPassConfirmText=0x7f080030;
         public static final int registerPassText=0x7f080031;
         public static final int registerUserText=0x7f08002d;
+        public static final int reviewsBackButton=0x7f080032;
+        public static final int reviewsCheckBox=0x7f080037;
+        public static final int reviewsImage=0x7f080033;
+        public static final int reviewsList=0x7f080034;
+        public static final int reviewsScore=0x7f080038;
+        public static final int reviewsTitle=0x7f080035;
+        public static final int reviewsUserName=0x7f080036;
         public static final int statusText=0x7f080018;
         public static final int statusTextView=0x7f08002f;
         public static final int textView2=0x7f08001c;
@@ -76,18 +83,18 @@ public final class R {
         public static final int textView7=0x7f08000f;
         public static final int textView8=0x7f080011;
         public static final int textView9=0x7f080013;
-        public static final int uploadBackButton=0x7f080032;
-        public static final int uploadLayoutPicture=0x7f08003d;
-        public static final int uploadLayoutRating=0x7f08003f;
+        public static final int uploadBackButton=0x7f080039;
+        public static final int uploadLayoutPicture=0x7f080044;
+        public static final int uploadLayoutRating=0x7f080046;
         public static final int uploadLayoutTitle=0x7f080005;
-        public static final int uploadLayoutUserName=0x7f08003e;
-        public static final int uploadList=0x7f080033;
-        public static final int userHomeAboutTextView=0x7f080037;
-        public static final int userHomeAvatar=0x7f080038;
-        public static final int userHomeFollowCheck=0x7f080039;
-        public static final int userHomeFollowersButton=0x7f080035;
-        public static final int userHomeFollowingButton=0x7f080036;
-        public static final int userHomeUploadsButton=0x7f080034;
+        public static final int uploadLayoutUserName=0x7f080045;
+        public static final int uploadList=0x7f08003a;
+        public static final int userHomeAboutTextView=0x7f08003e;
+        public static final int userHomeAvatar=0x7f08003f;
+        public static final int userHomeFollowCheck=0x7f080040;
+        public static final int userHomeFollowersButton=0x7f08003c;
+        public static final int userHomeFollowingButton=0x7f08003d;
+        public static final int userHomeUploadsButton=0x7f08003b;
         public static final int userHomeUsername=0x7f080003;
         public static final int userTextField=0x7f080015;
     }
@@ -101,7 +108,8 @@ public final class R {
         public static final int activity_uploads=0x7f030006;
         public static final int activity_user_home=0x7f030007;
         public static final int follow_layout=0x7f030008;
-        public static final int upload_layout=0x7f030009;
+        public static final int reviews_layout=0x7f030009;
+        public static final int upload_layout=0x7f03000a;
     }
     public static final class menu {
         public static final int feed=0x7f070000;
