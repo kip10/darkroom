@@ -40,6 +40,17 @@ public class RatingActivity extends Activity {
 		setContentView(R.layout.activity_rating);
 		
 		image = (ImageView)findViewById(R.id.ratingPicture);
+		image.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent goToReviewsPage = new Intent(v.getContext(),
+						ReviewsActivity.class);
+				startActivityForResult(goToReviewsPage, 0);
+				
+			}
+		});
+		
 		userName = (TextView)findViewById(R.id.ratingUserName);
 		score0 = (TextView)findViewById(R.id.ratingRatingScore0);
 		score1 = (TextView)findViewById(R.id.ratingRatingScore1);
