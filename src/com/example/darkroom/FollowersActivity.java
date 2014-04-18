@@ -45,7 +45,7 @@ public class FollowersActivity extends Activity{
 		//create adapter to map one element of db to element of ui
 		SimpleCursorAdapter mySCA = new SimpleCursorAdapter(
 				this, 
-				R.layout.item_layout,
+				R.layout.follow_layout,
 				cursor,
 				fromFieldNames, 
 				toViewIDs,
