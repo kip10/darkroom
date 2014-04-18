@@ -134,7 +134,7 @@
         		android:text= "testedittext"/>
             
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/pageReviewScore0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="About Me: "
@@ -147,7 +147,7 @@
         		android:text= "testedittext"/>
             
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/pageReviewScore1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="My Style: "
@@ -160,7 +160,7 @@
         		android:text= "testedittext"/>
             
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/pageReviewScore2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Work Interests: "
@@ -173,7 +173,7 @@
         		android:text= "testedittext"/>
             
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/pageReviewScore3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Website: "
