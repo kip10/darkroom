@@ -2,11 +2,13 @@ package com.example.darkroom;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 
 public class FeedActivity extends Activity {
 	private Button backButton;
@@ -18,7 +20,7 @@ public class FeedActivity extends Activity {
 		setContentView(R.layout.activity_following);
 		
 		list = (ListView)findViewById(R.id.FollowingList);
-		
+		populateList();
 		backButton = (Button)findViewById(R.id.FollowingBackButton);
 		backButton.setOnClickListener(new View.OnClickListener() {
 			
@@ -30,6 +32,28 @@ public class FeedActivity extends Activity {
 				
 			}
 		});
+	}
+	
+	private void populateList() {
+		Cursor cursor = myDb.getAllRows();
+		
+		//allow activity to manage cursor
+		startManagingCursor(cursor);
+		
+		//setup mapping from cursor to fields
+		String[] fromFieldNames = new String[]{"username"};
+		int[] toViewIDs = new int[]{R.id.pageFeedUserName};
+		
+		//create adapter to map one element of db to element of ui
+		SimpleCursorAdapter mySCA = new SimpleCursorAdapter(
+				this, 
+				R.layout.feed_layout,
+				cursor,
+				fromFieldNames, 
+				toViewIDs,
+				0);
+		
+		
 	}
 
 	@Override

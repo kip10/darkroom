@@ -35,7 +35,7 @@
         android:text="Following" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/pageFeedUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -68,8 +68,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignBaseline="@+id/pageFeedUserName"
+        android:layout_alignBottom="@+id/pageFeedUserName"
         android:layout_marginRight="25dp"
         android:layout_toLeftOf="@+id/pageReviewUser"
         android:text="Field1"
@@ -111,7 +111,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/pageFeedUserName"
         android:layout_marginLeft="14dp"
         android:layout_marginTop="18dp"
         android:text="0"

@@ -37,18 +37,19 @@ public final class R {
         public static final int homeStyleText=0x7f080010;
         public static final int homeWebsiteText=0x7f080014;
         public static final int homeWorkInterestText=0x7f080012;
-        public static final int itemLayoutAvatar=0x7f080042;
-        public static final int itemLayoutFollowingCheckBox=0x7f080041;
-        public static final int itemLayoutUserName=0x7f080043;
-        public static final int pageReviewAvatar=0x7f080044;
-        public static final int pageReviewFollowing=0x7f080046;
+        public static final int itemLayoutAvatar=0x7f080043;
+        public static final int itemLayoutFollowingCheckBox=0x7f080042;
+        public static final int itemLayoutUserName=0x7f080044;
+        public static final int pageFeedUserName=0x7f080041;
+        public static final int pageReviewAvatar=0x7f080045;
+        public static final int pageReviewFollowing=0x7f080047;
         public static final int pageReviewReview=0x7f08004a;
         public static final int pageReviewScore0=0x7f08000d;
         public static final int pageReviewScore1=0x7f08000f;
         public static final int pageReviewScore2=0x7f080011;
         public static final int pageReviewScore3=0x7f080013;
         public static final int pageReviewScore4=0x7f080049;
-        public static final int pageReviewUser=0x7f080045;
+        public static final int pageReviewUser=0x7f080046;
         public static final int passwordTextField=0x7f080016;
         public static final int ratingBackButton=0x7f08001d;
         public static final int ratingPicture=0x7f08001a;
@@ -85,7 +86,6 @@ public final class R {
         public static final int reviewsUserName=0x7f080036;
         public static final int statusText=0x7f080018;
         public static final int statusTextView=0x7f08002f;
-        public static final int textView1=0x7f080047;
         public static final int textView2=0x7f08001c;
         public static final int textView3=0x7f080048;
         public static final int textView4=0x7f080009;
@@ -114,9 +114,10 @@ public final class R {
         public static final int activity_reviews=0x7f030005;
         public static final int activity_uploads=0x7f030006;
         public static final int activity_user_home=0x7f030007;
-        public static final int follow_layout=0x7f030008;
-        public static final int reviews_layout=0x7f030009;
-        public static final int upload_layout=0x7f03000a;
+        public static final int feed_layout=0x7f030008;
+        public static final int follow_layout=0x7f030009;
+        public static final int reviews_layout=0x7f03000a;
+        public static final int upload_layout=0x7f03000b;
     }
     public static final class menu {
         public static final int feed=0x7f070000;
