@@ -48,6 +48,10 @@
             android:name="com.example.darkroom.RatingActivity"
             android:label="@string/title_activity_rating" >
         </activity>
+        <activity
+            android:name="com.example.darkroom.ReviewsActivity"
+            android:label="@string/title_activity_reviews" >
+        </activity>
     </application>
 
 </manifest>

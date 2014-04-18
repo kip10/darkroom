@@ -19,13 +19,21 @@ public class RatingActivity extends Activity {
 	private Button submitButton;
 	private ImageView image;
 	private TextView userName;
+	
 	private TextView score0;
+	private TextView score1;
+	private TextView score2;
+	private TextView score3;
+	private TextView score4;
+	
 	private EditText edit0;
 	private EditText edit1;
 	private EditText edit2;
 	private EditText edit3;
 	private EditText edit4;
 	private List<EditText> ratingsList;
+	private List<TextView> scoresList;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -34,6 +42,30 @@ public class RatingActivity extends Activity {
 		image = (ImageView)findViewById(R.id.ratingPicture);
 		userName = (TextView)findViewById(R.id.ratingUserName);
 		score0 = (TextView)findViewById(R.id.ratingRatingScore0);
+		score1 = (TextView)findViewById(R.id.ratingRatingScore1);
+		score2 = (TextView)findViewById(R.id.ratingRatingScore2);
+		score3 = (TextView)findViewById(R.id.ratingRatingScore3);
+		score4 = (TextView)findViewById(R.id.ratingRatingScore4);
+		
+		scoresList.add(score0);
+		scoresList.add(score1);
+		scoresList.add(score2);
+		scoresList.add(score3);
+		scoresList.add(score4);
+		//TODO: Populate scores
+		
+		for(TextView tv: scoresList){
+			tv.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent goToReviewsPage = new Intent(v.getContext(),
+							ReviewsActivity.class);
+					startActivityForResult(goToReviewsPage, 0);
+					
+				}
+			});
+		}
 		edit0 = (EditText)findViewById(R.id.ratingRatingEntry0);
 		edit1 = (EditText)findViewById(R.id.ratingRatingEntry1);
 		edit2 = (EditText)findViewById(R.id.ratingRatingEntry2);
