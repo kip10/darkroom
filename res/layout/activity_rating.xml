@@ -1,0 +1,226 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".RatingActivity" >
+
+    <ImageView
+        android:id="@+id/ratingPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="118dp"
+        android:layout_marginTop="52dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="120dp"
+        android:maxWidth="120dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/ratingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ratingPicture"
+        android:layout_marginTop="36dp"
+        android:text="Title"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ratingTitle"
+        android:layout_centerHorizontal="true"
+        android:text="by: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/ratingUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:text="User"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/ratingBackButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingTitle"
+        android:layout_alignParentTop="true"
+        android:text="Back" />
+
+    <TextView
+        android:id="@+id/ratingRatingField0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingTitle"
+        android:layout_centerVertical="true"
+        android:text="Field0"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ratingRatingField2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingRatingField1"
+        android:layout_below="@+id/ratingRatingField1"
+        android:layout_marginTop="18dp"
+        android:text="Field2"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ratingRatingField1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingRatingField0"
+        android:layout_below="@+id/ratingRatingField0"
+        android:layout_marginTop="17dp"
+        android:text="Field1"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ratingRatingField3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingRatingField2"
+        android:layout_below="@+id/ratingRatingField2"
+        android:layout_marginTop="14dp"
+        android:text="Field3"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ratingRatingField4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingRatingField3"
+        android:layout_below="@+id/ratingRatingField3"
+        android:layout_marginTop="18dp"
+        android:text="Field4"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ratingRatingScore0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ratingRatingField0"
+        android:layout_alignBottom="@+id/ratingRatingField0"
+        android:layout_alignLeft="@+id/ratingUserName"
+        android:text="0.0"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ratingRatingScore1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ratingRatingField1"
+        android:layout_alignBottom="@+id/ratingRatingField1"
+        android:layout_alignLeft="@+id/ratingRatingScore0"
+        android:text="1.1"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ratingRatingScore2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ratingRatingField3"
+        android:layout_alignLeft="@+id/ratingRatingScore1"
+        android:text="2.2"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ratingRatingScore3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ratingRatingField4"
+        android:layout_alignLeft="@+id/ratingRatingScore2"
+        android:text="3.3"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ratingRatingScore4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ratingRatingField4"
+        android:layout_alignBottom="@+id/ratingRatingField4"
+        android:layout_alignLeft="@+id/ratingRatingScore3"
+        android:text="4.4"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/ratingRatingEntry1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ratingRatingField1"
+        android:layout_alignBottom="@+id/ratingRatingField1"
+        android:layout_alignLeft="@+id/ratingPicture"
+        android:layout_toLeftOf="@+id/ratingRatingScore1"
+        android:ems="10"
+        android:inputType="number"
+        android:text="YourRating" />
+
+    <EditText
+        android:id="@+id/ratingRatingEntry2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ratingRatingField2"
+        android:layout_alignBottom="@+id/ratingRatingField2"
+        android:layout_alignLeft="@+id/ratingRatingEntry1"
+        android:layout_toLeftOf="@+id/ratingRatingScore2"
+        android:ems="10"
+        android:inputType="number"
+        android:text="YourRating" />
+
+    <EditText
+        android:id="@+id/ratingRatingEntry3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingRatingEntry2"
+        android:layout_alignTop="@+id/ratingRatingField3"
+        android:layout_toLeftOf="@+id/ratingRatingScore3"
+        android:ems="10"
+        android:inputType="number"
+        android:text="YourRating" />
+
+    <EditText
+        android:id="@+id/ratingRatingEntry4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingRatingEntry3"
+        android:layout_alignTop="@+id/ratingRatingField4"
+        android:layout_toLeftOf="@+id/ratingRatingScore4"
+        android:ems="10"
+        android:inputType="number"
+        android:text="YourRating" />
+
+    <EditText
+        android:id="@+id/ratingRatingEntry0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingPicture"
+        android:layout_alignRight="@+id/ratingRatingEntry1"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="number"
+        android:text="YourRating" />
+
+    <Button
+        android:id="@+id/ratingSubmitButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ratingBackButton"
+        android:layout_alignBottom="@+id/ratingBackButton"
+        android:layout_alignParentRight="true"
+        android:text="Submit" />
+
+</RelativeLayout>

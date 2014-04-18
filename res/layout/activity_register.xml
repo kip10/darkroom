@@ -37,7 +37,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/ratingUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/statusTextView"
-        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignLeft="@+id/ratingUserName"
         android:text="Register" />
 
     <TextView
@@ -79,7 +79,7 @@
         android:id="@+id/registerPassText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView3"
+        android:layout_above="@+id/ratingUserName"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:inputType="textPassword" />
