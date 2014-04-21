@@ -62,7 +62,7 @@ public class RegisterActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				
+				int max = 0;
 				String passwordConfirmed = passConfirm.getText().toString();
 				String password = pass.getText().toString();
 				String email = eMail.getText().toString();
@@ -72,15 +72,47 @@ public class RegisterActivity extends Activity {
 					return;
 				}
 				
+				InputStream isr1 = null;
+				try{
+					HttpClient httpclient = new DefaultHttpClient();
+					HttpPost httppost = new HttpPost(
+							"http://54.201.1.107/php/maxUserID.php");
+					
+					httppost.setEntity(new UrlEncodedFormEntity(null, "UTF-8"));
+					HttpResponse response = httpclient.execute(httppost);
+
+					HttpEntity entity = response.getEntity();
+					isr1 = entity.getContent();
+					
+				}catch (Exception e) {
+					Log.e("log_tag", "Error in http connection " + e.toString());
+
+				}
+				try {
+
+					BufferedReader reader = new BufferedReader(
+							new InputStreamReader(isr1, "iso-8859-1"), 8);
+					StringBuilder sb = new StringBuilder();
+					String line = reader.readLine();
+					sb.append(line);
+					String result = sb.toString();
+					max = Integer.parseInt(result);
+				    max=max +1;
+				} catch (Exception e) {
+					Log.e("log_tag", "Error  converting result " + e.toString());
+				}
+				
+				
 				String result = "";
 				InputStream isr = null;
 				try {
 					HttpClient httpclient = new DefaultHttpClient();
 					HttpPost httppost = new HttpPost(
 							"http://54.201.1.107/php/register.php");
-					List<NameValuePair> params = new ArrayList<NameValuePair>(2);
+					List<NameValuePair> params = new ArrayList<NameValuePair>(3);
 					params.add(new BasicNameValuePair("email", email));
 					params.add(new BasicNameValuePair("pass", password));
+					params.add(new BasicNameValuePair("max", String.valueOf(max)));
 					
 
 					httppost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
@@ -92,6 +124,7 @@ public class RegisterActivity extends Activity {
 					Log.e("log_tag", "Error in http connection " + e.toString());
 
 				}
+				
 				// convert response to string
 				try {
 
