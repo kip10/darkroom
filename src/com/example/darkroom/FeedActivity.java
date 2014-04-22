@@ -134,7 +134,7 @@ public class FeedActivity extends Activity {
 			});
 			
 			TextView rating = (TextView)itemView.findViewById(R.id.pageFeedRating);
-			rating.setText(currentObject.getRating());
+			rating.setText(String.valueOf(currentObject.getRating()));
 			rating.setOnClickListener(new View.OnClickListener() {
 				
 				@Override

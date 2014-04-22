@@ -3,12 +3,12 @@ package com.example.listObjects;
 import java.io.File;
 
 public class UploadObject {
-	private String rating;
+	private double rating;
 	private String username;
 	private String title;
 	private File image;
 	private boolean following;
-	public String getRating() {
+	public double getRating() {
 		return rating;
 	}
 	public String getUsername() {
@@ -23,7 +23,7 @@ public class UploadObject {
 	public boolean isFollowing() {
 		return following;
 	}
-	public UploadObject(String rating, String username, String title,
+	public UploadObject(double rating, String username, String title,
 			File image, boolean following) {
 		super();
 		this.rating = rating;

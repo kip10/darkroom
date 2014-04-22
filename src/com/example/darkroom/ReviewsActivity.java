@@ -156,19 +156,19 @@ public class ReviewsActivity extends Activity{
 			});
 			
 			TextView rating0 = (TextView)itemView.findViewById(R.id.pageReviewScore0);
-			rating0.setText(currentObject.getRating1());
+			rating0.setText(String.valueOf(currentObject.getRating1()));
 			
 			TextView rating1 = (TextView)itemView.findViewById(R.id.pageReviewScore1);
-			rating1.setText(currentObject.getRating2());
+			rating1.setText(String.valueOf(currentObject.getRating2()));
 			
 			TextView rating2 = (TextView)itemView.findViewById(R.id.pageReviewScore2);
-			rating2.setText(currentObject.getRating3());
+			rating2.setText(String.valueOf(currentObject.getRating3()));
 			
 			TextView rating3 = (TextView)itemView.findViewById(R.id.pageReviewScore3);
-			rating3.setText(currentObject.getRating4());
+			rating3.setText(String.valueOf(currentObject.getRating4()));
 			
 			TextView rating4 = (TextView)itemView.findViewById(R.id.pageReviewScore4);
-			rating4.setText(currentObject.getRating5());
+			rating4.setText(String.valueOf(currentObject.getRating5()));
 			
 			CheckBox following = (CheckBox)itemView.findViewById(R.id.pageReviewFollowing);
 			following.setChecked(currentObject.isFollowing());

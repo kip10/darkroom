@@ -3,9 +3,9 @@ package com.example.listObjects;
 public class FeedObject {
 	private String username;
 	private String title;
-	private String rating;
+	private double rating;
 	//TODO: implement picture
-	public FeedObject(String username, String title, String rating) {
+	public FeedObject(String username, String title, double rating) {
 		super();
 		this.username = username;
 		this.title = title;
@@ -17,7 +17,7 @@ public class FeedObject {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public void setRating(String rating) {
+	public void setRating(double rating) {
 		this.rating = rating;
 	}
 	public String getUsername() {
@@ -26,7 +26,7 @@ public class FeedObject {
 	public String getTitle() {
 		return title;
 	}
-	public String getRating() {
+	public double getRating() {
 		return rating;
 	}
 	

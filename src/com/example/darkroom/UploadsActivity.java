@@ -113,7 +113,7 @@ public class UploadsActivity extends Activity{
 			});
 			
 			TextView rating = (TextView)itemView.findViewById(R.id.uploadLayoutRating);
-			rating.setText(currentObject.getRating());
+			rating.setText(String.valueOf(currentObject.getRating()));
 			rating.setOnClickListener(new View.OnClickListener() {
 				
 				@Override
