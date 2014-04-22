@@ -35,6 +35,7 @@ public class FeedActivity extends Activity {
 	}
 	
 	private void populateList() {
+		/*
 		Cursor cursor = myDb.getAllRows();
 		
 		//allow activity to manage cursor
@@ -52,7 +53,7 @@ public class FeedActivity extends Activity {
 				fromFieldNames, 
 				toViewIDs,
 				0);
-		
+		*/
 		
 	}
 

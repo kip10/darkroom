@@ -33,6 +33,7 @@ public class FollowersActivity extends Activity{
 		populateList();
 	}
 	private void populateList() {
+		/*
 		Cursor cursor = myDb.getAllRows();
 		
 		//allow activity to manage cursor
@@ -51,6 +52,6 @@ public class FollowersActivity extends Activity{
 				toViewIDs,
 				0);
 		
-		
+		*/
 	}
 }

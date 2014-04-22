@@ -33,6 +33,7 @@ public class FollowingActivity extends Activity{
 		populateList();
 	}
 	private void populateList() {
+		/*
 		Cursor cursor = myDb.getAllRows();
 		
 		//allow activity to manage cursor
@@ -50,7 +51,7 @@ public class FollowingActivity extends Activity{
 				fromFieldNames, 
 				toViewIDs,
 				0);
-		
+		*/
 		
 	}
 }

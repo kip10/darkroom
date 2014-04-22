@@ -33,6 +33,7 @@ public class UploadsActivity extends Activity{
 		populateList();
 	}
 	private void populateList() {
+		/*
 		Cursor cursor = myDb.getAllRows();
 		
 		//allow activity to manage cursor
@@ -51,6 +52,6 @@ public class UploadsActivity extends Activity{
 				toViewIDs,
 				0);
 		
-		
+		*/
 	}
 }

@@ -84,6 +84,7 @@ public class ReviewsActivity extends Activity{
 		
 	}
 	private void populateList() {
+		/*
 		Cursor cursor = myDb.getAllRows();
 		
 		//allow activity to manage cursor
@@ -102,6 +103,6 @@ public class ReviewsActivity extends Activity{
 				toViewIDs,
 				0);
 		
-		
+		*/
 	}
 }

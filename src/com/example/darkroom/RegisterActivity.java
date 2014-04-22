@@ -62,7 +62,7 @@ public class RegisterActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				int max = 0;
+				//int max = 0;
 				String passwordConfirmed = passConfirm.getText().toString();
 				String password = pass.getText().toString();
 				String email = eMail.getText().toString();
@@ -72,8 +72,9 @@ public class RegisterActivity extends Activity {
 					return;
 				}
 				
-				InputStream isr1 = null;
-				try{
+				//InputStream isr1 = null;
+				/*try{
+					
 					HttpClient httpclient = new DefaultHttpClient();
 					HttpPost httppost = new HttpPost(
 							"http://54.201.1.107/php/maxUserID.php");
@@ -87,7 +88,8 @@ public class RegisterActivity extends Activity {
 				}catch (Exception e) {
 					Log.e("log_tag", "Error in http connection " + e.toString());
 
-				}
+				}*/
+				/*
 				try {
 
 					BufferedReader reader = new BufferedReader(
@@ -100,7 +102,7 @@ public class RegisterActivity extends Activity {
 				    max=max +1;
 				} catch (Exception e) {
 					Log.e("log_tag", "Error  converting result " + e.toString());
-				}
+				}*/
 				
 				
 				String result = "";
@@ -112,7 +114,7 @@ public class RegisterActivity extends Activity {
 					List<NameValuePair> params = new ArrayList<NameValuePair>(3);
 					params.add(new BasicNameValuePair("email", email));
 					params.add(new BasicNameValuePair("pass", password));
-					params.add(new BasicNameValuePair("max", String.valueOf(max)));
+					//params.add(new BasicNameValuePair("max", String.valueOf(max)));
 					
 
 					httppost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
@@ -150,7 +152,7 @@ public class RegisterActivity extends Activity {
 					}
 
 				} catch (Exception e) {
-					// TODO: handle exception
+					
 					Log.e("log_tag", "Error Parsing Data " + e.toString());
 				}
 				
