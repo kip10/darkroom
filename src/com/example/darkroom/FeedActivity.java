@@ -3,6 +3,8 @@ package com.example.darkroom;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.listObjects.FeedObject;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,7 +20,7 @@ import android.widget.TextView;
 public class FeedActivity extends Activity {
 	private Button backButton;
 	private ListView list;
-	private List<Object> feedList = new ArrayList<Object>();
+	private List<FeedObject> feedList = new ArrayList<FeedObject>();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -62,7 +64,7 @@ public class FeedActivity extends Activity {
 				0);
 		*/
 		//TODO: add all items to List
-		//TODO: create custom object instead of <Object>?
+		
 	}
 
 	@Override
@@ -72,13 +74,13 @@ public class FeedActivity extends Activity {
 		return true;
 	}
 	private void populateListView() {
-		ArrayAdapter<Object> myAdapter = new MyListAdapter();
+		ArrayAdapter<FeedObject> myAdapter = new MyListAdapter();
 		ListView feedList = (ListView) findViewById(R.layout.activity_following);
 		feedList.setAdapter(myAdapter);
 		
 	}
 	
-	private class MyListAdapter extends ArrayAdapter<Object>{
+	private class MyListAdapter extends ArrayAdapter<FeedObject>{
 		public MyListAdapter(){
 			super(FeedActivity.this, R.layout.feed_layout, feedList);
 		}
@@ -90,14 +92,59 @@ public class FeedActivity extends Activity {
 			if(itemView==null){
 				itemView = getLayoutInflater().inflate(R.layout.feed_layout, parent, false);
 			}
-			Object currentObject = feedList.get(position);
+			FeedObject currentObject = feedList.get(position);
 			
 			//fill fields
 			ImageView image = (ImageView)itemView.findViewById(R.id.pageFeedImage);
-			TextView userName = (TextView)itemView.findViewById(R.id.pageFeedUserName);
-			TextView title = (TextView)itemView.findViewById(R.id.pageFeedTitle);
-			TextView rating = (TextView)itemView.findViewById(R.id.pageFeedRating);
+			//TODO: set image
+			image.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					//TODO: Implement
+					
+				}
+			});
 			
+			
+			TextView userName = (TextView)itemView.findViewById(R.id.pageFeedUserName);
+			userName.setText(currentObject.getUsername());
+			userName.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+				Intent goToHomePage = new Intent(v.getContext(),
+							UserHomeActivity.class);
+					startActivityForResult(goToHomePage, 0);
+					
+				}
+			});
+			
+			TextView title = (TextView)itemView.findViewById(R.id.pageFeedTitle);
+			title.setText(currentObject.getTitle());
+			title.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent goToRatingPage = new Intent(v.getContext(),
+							UserHomeActivity.class);
+					startActivityForResult(goToRatingPage, 0);
+					
+				}
+			});
+			
+			TextView rating = (TextView)itemView.findViewById(R.id.pageFeedRating);
+			rating.setText(currentObject.getRating());
+			rating.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent goToReviews = new Intent(v.getContext(),
+							ReviewsActivity.class);
+					startActivityForResult(goToReviews, 0);
+					
+				}
+			});
 			return itemView;
 		}
 	}
