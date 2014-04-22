@@ -1,19 +1,24 @@
 package com.example.darkroom;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 
 public class FeedActivity extends Activity {
 	private Button backButton;
 	private ListView list;
-	
+	private List<Object> feedList = new ArrayList<Object>();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -21,6 +26,7 @@ public class FeedActivity extends Activity {
 		
 		list = (ListView)findViewById(R.id.FollowingList);
 		populateList();
+		populateListView();
 		backButton = (Button)findViewById(R.id.FollowingBackButton);
 		backButton.setOnClickListener(new View.OnClickListener() {
 			
@@ -34,6 +40,7 @@ public class FeedActivity extends Activity {
 		});
 	}
 	
+
 	private void populateList() {
 		/*
 		Cursor cursor = myDb.getAllRows();
@@ -54,7 +61,8 @@ public class FeedActivity extends Activity {
 				toViewIDs,
 				0);
 		*/
-		
+		//TODO: add all items to List
+		//TODO: create custom object instead of <Object>?
 	}
 
 	@Override
@@ -62,6 +70,36 @@ public class FeedActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.feed, menu);
 		return true;
+	}
+	private void populateListView() {
+		ArrayAdapter<Object> myAdapter = new MyListAdapter();
+		ListView feedList = (ListView) findViewById(R.layout.activity_following);
+		feedList.setAdapter(myAdapter);
+		
+	}
+	
+	private class MyListAdapter extends ArrayAdapter<Object>{
+		public MyListAdapter(){
+			super(FeedActivity.this, R.layout.feed_layout, feedList);
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			//Make sure we have view to work with
+			View itemView = convertView;
+			if(itemView==null){
+				itemView = getLayoutInflater().inflate(R.layout.feed_layout, parent, false);
+			}
+			Object currentObject = feedList.get(position);
+			
+			//fill fields
+			ImageView image = (ImageView)itemView.findViewById(R.id.pageFeedImage);
+			TextView userName = (TextView)itemView.findViewById(R.id.pageFeedUserName);
+			TextView title = (TextView)itemView.findViewById(R.id.pageFeedTitle);
+			TextView rating = (TextView)itemView.findViewById(R.id.pageFeedRating);
+			
+			return itemView;
+		}
 	}
 
 }
