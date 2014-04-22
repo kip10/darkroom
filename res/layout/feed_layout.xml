@@ -9,9 +9,43 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="63dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="38dp"
         android:text="User"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/pageFeedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pageFeedUserName"
+        android:layout_alignBottom="@+id/pageFeedUserName"
+        android:layout_centerHorizontal="true"
+        android:text="Title"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/pageFeedRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pageFeedTitle"
+        android:layout_alignBottom="@+id/pageFeedTitle"
+        android:layout_alignParentRight="true"
+        android:text="1.1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/pageFeedImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/pageFeedUserName"
+        android:layout_marginTop="28dp"
+        android:maxHeight="100dp"
+        android:maxWidth="120dp"
+        android:minHeight="100dp"
+        android:minWidth="100dp"
+        android:src="@drawable/ic_launcher" />
 
 </RelativeLayout>
