@@ -20,7 +20,7 @@ import android.widget.TextView;
 public class FeedActivity extends Activity {
 	private Button backButton;
 	private ListView list;
-	private List<FeedObject> feedList = new ArrayList<FeedObject>();
+	private List<FeedObject> feedList = new ArrayList<FeedObject>(200);
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

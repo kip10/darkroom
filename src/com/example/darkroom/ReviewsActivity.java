@@ -24,7 +24,7 @@ public class ReviewsActivity extends Activity{
 	private TextView userName;
 	private TextView score;
 	private CheckBox checkBoxFollowing;
-	private List<ReviewsObject> reviewList = new ArrayList<ReviewsObject>();
+	private List<ReviewsObject> reviewList = new ArrayList<ReviewsObject>(40);
 	 
 	@Override
 	public void onCreate(Bundle savedInstanceState){
@@ -170,6 +170,16 @@ public class ReviewsActivity extends Activity{
 			TextView rating4 = (TextView)itemView.findViewById(R.id.pageReviewScore4);
 			rating4.setText(currentObject.getRating5());
 			
+			CheckBox following = (CheckBox)itemView.findViewById(R.id.pageReviewFollowing);
+			following.setChecked(currentObject.isFollowing());
+			following.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					
+				}
+			});
 			return itemView;
 		}
 	}
