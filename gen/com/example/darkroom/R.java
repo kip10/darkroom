@@ -27,7 +27,6 @@ public final class R {
         public static final int FollowingBackButton=0x7f080000;
         public static final int FollowingList=0x7f080001;
         public static final int action_settings=0x7f080053;
-        public static final int checkBox1=0x7f080052;
         public static final int homeAboutText=0x7f08000e;
         public static final int homeAllowCommentsText=0x7f08000a;
         public static final int homeAllowGuestbookText=0x7f080008;
@@ -95,10 +94,11 @@ public final class R {
         public static final int textView4=0x7f080009;
         public static final int textView5=0x7f08000b;
         public static final int uploadBackButton=0x7f080039;
-        public static final int uploadLayoutPicture=0x7f08004f;
-        public static final int uploadLayoutRating=0x7f080051;
-        public static final int uploadLayoutTitle=0x7f080005;
-        public static final int uploadLayoutUserName=0x7f080050;
+        public static final int uploadLayoutFollowing=0x7f080051;
+        public static final int uploadLayoutImage=0x7f080052;
+        public static final int uploadLayoutRating=0x7f080050;
+        public static final int uploadLayoutTitle=0x7f08004f;
+        public static final int uploadLayoutUser=0x7f080005;
         public static final int uploadList=0x7f08003a;
         public static final int userHomeAboutTextView=0x7f08003e;
         public static final int userHomeAvatar=0x7f08003f;
