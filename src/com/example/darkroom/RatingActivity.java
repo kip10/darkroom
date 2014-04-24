@@ -27,12 +27,6 @@ public class RatingActivity extends Activity {
 	private TextView score4;
 	
 	private EditText edit0;
-	private EditText edit1;
-	private EditText edit2;
-	private EditText edit3;
-	private EditText edit4;
-	private List<EditText> ratingsList;
-	private List<TextView> scoresList;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +35,13 @@ public class RatingActivity extends Activity {
 		
 		image = (ImageView)findViewById(R.id.ratingPicture);
 		image.setOnClickListener(new View.OnClickListener() {
-			
+		//TODO: populate right picture
 			@Override
 			public void onClick(View v) {
 				Intent goToReviewsPage = new Intent(v.getContext(),
 						ReviewsActivity.class);
 				startActivityForResult(goToReviewsPage, 0);
-				
+				//TODO: go to proper review
 			}
 		});
 		
@@ -59,60 +53,16 @@ public class RatingActivity extends Activity {
 				Intent goToUserHome = new Intent(v.getContext(),
 						UserHomeActivity.class);
 				startActivityForResult(goToUserHome, 0);
-				
+				//TODO: go to right user page
 			}
 		});
 		
 		score0 = (TextView)findViewById(R.id.ratingRatingScore0);
-		score1 = (TextView)findViewById(R.id.ratingRatingScore1);
-		score2 = (TextView)findViewById(R.id.ratingRatingScore2);
-		score3 = (TextView)findViewById(R.id.ratingRatingScore3);
-		score4 = (TextView)findViewById(R.id.ratingRatingScore4);
-		
-		scoresList.add(score0);
-		scoresList.add(score1);
-		scoresList.add(score2);
-		scoresList.add(score3);
-		scoresList.add(score4);
 		//TODO: Populate scores
 		
-		for(TextView tv: scoresList){
-			tv.setOnClickListener(new View.OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					Intent goToReviewsPage = new Intent(v.getContext(),
-							ReviewsActivity.class);
-					startActivityForResult(goToReviewsPage, 0);
-					
-				}
-			});
-		}
+		
+		
 		edit0 = (EditText)findViewById(R.id.ratingRatingEntry0);
-		edit1 = (EditText)findViewById(R.id.ratingRatingEntry1);
-		edit2 = (EditText)findViewById(R.id.ratingRatingEntry2);
-		edit3 = (EditText)findViewById(R.id.ratingRatingEntry3);
-		edit4 = (EditText)findViewById(R.id.ratingRatingEntry4);
-		
-		ratingsList= new ArrayList<EditText>();
-		ratingsList.add(edit0);
-		ratingsList.add(edit1);
-		ratingsList.add(edit2);
-		ratingsList.add(edit3);
-		ratingsList.add(edit4);
-		
-		userName.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent goToUserHome = new Intent(v.getContext(),
-						UserHomeActivity.class);
-				startActivityForResult(goToUserHome, 0);
-				
-			}
-		});
-		
-		//TODO: set image on click listener
 		
 		backButton = (Button)findViewById(R.id.ratingBackButton);
 		backButton.setOnClickListener(new View.OnClickListener() {
@@ -132,20 +82,19 @@ public class RatingActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				for(EditText et: ratingsList){
-					String rating = et.getText().toString();
-					if(!isInt(rating)){
-						Toast.makeText(getBaseContext(), "Enter an Integer for the Rating", Toast.LENGTH_LONG ).show();
-						return;
-					}
-					if(!validRating(rating)){
-						Toast.makeText(getBaseContext(), "Rating must be in range 0-10", Toast.LENGTH_LONG).show();
-						return;
-					}
+				String rating = edit0.getText().toString();
+				if(!isInt(rating)){
+					Toast.makeText(getBaseContext(), "Enter an Integer for the Rating", Toast.LENGTH_LONG ).show();
+					return;
 				}
-				//TODO: rate on BackEnd
-				//TODO: change view after submitting? or toast
 				
+				if(!validRating(rating)){
+					Toast.makeText(getBaseContext(), "Rating must be in range 0-10", Toast.LENGTH_LONG).show();
+					return;
+				}
+				
+				//TODO: rate on BackEnd
+				Toast.makeText(getBaseContext(), "Rating Submitted!",Toast.LENGTH_LONG).show();
 			}
 
 		});
