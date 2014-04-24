@@ -35,7 +35,7 @@
         android:text="Following" />
 
     <TextView
-        android:id="@+id/pageFeedUserName"
+        android:id="@+id/videoFeedUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -58,18 +58,18 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignBaseline="@+id/menuUsername"
+        android:layout_alignBottom="@+id/menuUsername"
         android:layout_alignRight="@+id/pageReviewUser"
         android:text="Field2"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/menuUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/pageFeedUserName"
-        android:layout_alignBottom="@+id/pageFeedUserName"
+        android:layout_alignBaseline="@+id/videoFeedUserName"
+        android:layout_alignBottom="@+id/videoFeedUserName"
         android:layout_marginRight="25dp"
         android:layout_toLeftOf="@+id/pageReviewUser"
         android:text="Field1"
@@ -111,7 +111,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/pageFeedUserName"
+        android:layout_below="@+id/videoFeedUserName"
         android:layout_marginLeft="14dp"
         android:layout_marginTop="18dp"
         android:text="0"

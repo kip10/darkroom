@@ -32,7 +32,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/menuUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/ratingTitle"
@@ -44,8 +44,8 @@
         android:id="@+id/ratingUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignBaseline="@+id/menuUsername"
+        android:layout_alignBottom="@+id/menuUsername"
         android:layout_alignParentRight="true"
         android:text="User"
         android:textAppearance="?android:attr/textAppearanceMedium" />

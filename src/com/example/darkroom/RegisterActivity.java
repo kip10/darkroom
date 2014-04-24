@@ -147,7 +147,7 @@ public class RegisterActivity extends Activity {
 						
 					} else {
 						Intent goToHomePage = new Intent(v.getContext(),
-								HomeActivity.class);
+								SettingsActivity.class);
 						startActivityForResult(goToHomePage, 0);
 					}
 

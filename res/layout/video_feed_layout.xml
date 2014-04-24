@@ -34,18 +34,12 @@
         android:text="1.1"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <ImageView
-        android:id="@+id/pageFeedImage"
+    <VideoView
+        android:id="@+id/videoFeedVideo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/videoFeedUserName"
-        android:layout_marginTop="28dp"
-        android:maxHeight="100dp"
-        android:maxWidth="120dp"
-        android:minHeight="100dp"
-        android:minWidth="100dp"
-        android:src="@drawable/ic_launcher" />
+        android:layout_below="@+id/videoFeedTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp" />
 
 </RelativeLayout>

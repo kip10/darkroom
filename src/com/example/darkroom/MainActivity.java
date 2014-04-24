@@ -33,6 +33,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	EditText userNameText;
@@ -101,11 +102,11 @@ public class MainActivity extends Activity {
 				// parse json data
 				try {
 					if (result.equals("true")) {
-						Intent goToHomePage = new Intent(v.getContext(),
-								HomeActivity.class);
-						startActivityForResult(goToHomePage, 0);
+						Intent goToMenuPage = new Intent(v.getContext(),
+								MenuActivity.class);
+						startActivityForResult(goToMenuPage, 0);
 					} else {
-						errorText.setText("Error: Incorrect Username/Password");
+						Toast.makeText(getBaseContext(), "Error, Incorrect Username/Password", Toast.LENGTH_LONG ).show();
 					}
 
 				} catch (Exception e) {

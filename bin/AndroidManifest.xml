@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.darkroom.HomeActivity"
+            android:name="com.example.darkroom.SettingsActivity"
             android:label="@string/title_activity_home" >
         </activity>
         <activity
@@ -37,7 +37,7 @@
             android:label="@string/title_activity_upload" >
         </activity>
         <activity
-            android:name="com.example.darkroom.FeedActivity"
+            android:name="com.example.darkroom.PhotoFeedActivity"
             android:label="@string/title_activity_feed" >
         </activity>
         <activity
@@ -51,6 +51,14 @@
         <activity
             android:name="com.example.darkroom.ReviewsActivity"
             android:label="@string/title_activity_reviews" >
+        </activity>
+        <activity
+            android:name="com.example.darkroom.MenuActivity"
+            android:label="@string/title_activity_menu" >
+        </activity>
+        <activity
+            android:name="com.example.darkroom.VideoFeedActivity"
+            android:label="@string/title_activity_video_feed" >
         </activity>
     </application>
 

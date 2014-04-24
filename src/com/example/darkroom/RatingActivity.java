@@ -120,7 +120,7 @@ public class RatingActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent goToFeedPage = new Intent(v.getContext(),
-						FeedActivity.class);
+						PhotoFeedActivity.class);
 				startActivityForResult(goToFeedPage, 0);
 				
 			}

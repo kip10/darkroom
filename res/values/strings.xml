@@ -14,5 +14,7 @@
     <string name="title_activity_user_home">UserHomeActivity</string>
     <string name="title_activity_rating">RatingActivity</string>
     <string name="title_activity_reviews">ReviewsActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_video_feed">VideoFeedActivity</string>
 
 </resources>
