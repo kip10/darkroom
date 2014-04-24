@@ -34,7 +34,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+/**
+ * MainActivity class should be completed unless something is changed on the backend with the 
+ * log in process
+ * 
+ * You can see an example of how to use the php scripts to interact with the database here,
+ * where i use the login.php script to do so.
+ */
 public class MainActivity extends Activity {
 	EditText userNameText;
 	EditText passwordText;

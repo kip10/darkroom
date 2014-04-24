@@ -26,7 +26,7 @@ public final class R {
     public static final class id {
         public static final int FollowingBackButton=0x7f080000;
         public static final int FollowingList=0x7f080001;
-        public static final int action_settings=0x7f08004f;
+        public static final int action_settings=0x7f08004b;
         public static final int homeAboutText=0x7f08002c;
         public static final int homeAllowCommentsText=0x7f080028;
         public static final int homeAllowGuestbookText=0x7f080026;
@@ -45,16 +45,15 @@ public final class R {
         public static final int menuUsername=0x7f080008;
         public static final int menuVideoFeed=0x7f08000a;
         public static final int pageFeedImage=0x7f08003e;
-        public static final int pageReivewImage=0x7f080049;
-        public static final int pageReviewAvatar=0x7f080042;
+        public static final int pageReviewAvatar=0x7f080043;
         public static final int pageReviewFollowing=0x7f080044;
-        public static final int pageReviewReview=0x7f080048;
+        public static final int pageReviewReview=0x7f080045;
+        public static final int pageReviewScore=0x7f080007;
         public static final int pageReviewScore0=0x7f08002b;
         public static final int pageReviewScore1=0x7f08002d;
         public static final int pageReviewScore2=0x7f08002f;
         public static final int pageReviewScore3=0x7f080031;
-        public static final int pageReviewScore4=0x7f080047;
-        public static final int pageReviewUser=0x7f080043;
+        public static final int pageReviewUser=0x7f080042;
         public static final int passwordTextField=0x7f080003;
         public static final int ratingBackButton=0x7f080010;
         public static final int ratingBy=0x7f08000f;
@@ -65,7 +64,6 @@ public final class R {
         public static final int ratingSubmitButton=0x7f080015;
         public static final int ratingTitle=0x7f08000e;
         public static final int ratingUserName=0x7f080013;
-        public static final int ratingUsername=0x7f080046;
         public static final int registerButton=0x7f080006;
         public static final int registerButtonRegister=0x7f080004;
         public static final int registerEmailText=0x7f080018;
@@ -81,15 +79,13 @@ public final class R {
         public static final int reviewsUserName=0x7f080021;
         public static final int statusText=0x7f080005;
         public static final int statusTextView=0x7f08001a;
-        public static final int textView1=0x7f080007;
-        public static final int textView3=0x7f080045;
         public static final int textView4=0x7f080027;
         public static final int textView5=0x7f080029;
         public static final int uploadBackButton=0x7f080033;
-        public static final int uploadLayoutFollowing=0x7f08004c;
-        public static final int uploadLayoutImage=0x7f08004d;
-        public static final int uploadLayoutRating=0x7f08004b;
-        public static final int uploadLayoutTitle=0x7f08004a;
+        public static final int uploadLayoutFollowing=0x7f080048;
+        public static final int uploadLayoutImage=0x7f080049;
+        public static final int uploadLayoutRating=0x7f080047;
+        public static final int uploadLayoutTitle=0x7f080046;
         public static final int uploadLayoutUser=0x7f080019;
         public static final int uploadList=0x7f080034;
         public static final int userHomeAboutTextView=0x7f080038;
@@ -103,7 +99,7 @@ public final class R {
         public static final int videoFeedRating=0x7f08003d;
         public static final int videoFeedTitle=0x7f08003c;
         public static final int videoFeedUserName=0x7f08003b;
-        public static final int videoFeedVideo=0x7f08004e;
+        public static final int videoFeedVideo=0x7f08004a;
     }
     public static final class layout {
         public static final int activity_following=0x7f030000;

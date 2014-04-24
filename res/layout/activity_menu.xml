@@ -9,7 +9,7 @@
     tools:context=".MenuActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/pageReviewScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -21,7 +21,7 @@
         android:id="@+id/menuUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/pageReviewScore"
         android:layout_centerHorizontal="true"
         android:text="Username"
         android:textAppearance="?android:attr/textAppearanceLarge" />

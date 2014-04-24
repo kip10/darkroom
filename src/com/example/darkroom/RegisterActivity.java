@@ -34,13 +34,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+/**
+ * This class "should be done", if the autoincrement on the userid works properly on the backend
+ * 
+ * 
+ *
+ */
 public class RegisterActivity extends Activity {
 	private Button registerButton;
 	private EditText pass;
 	private EditText passConfirm;
 	private EditText eMail;
-	private TextView statusText;
 	
 
 	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
@@ -71,39 +75,6 @@ public class RegisterActivity extends Activity {
 					Toast.makeText(getBaseContext(), "Error: Passwords Don't Match", Toast.LENGTH_LONG).show();
 					return;
 				}
-				
-				//InputStream isr1 = null;
-				/*try{
-					
-					HttpClient httpclient = new DefaultHttpClient();
-					HttpPost httppost = new HttpPost(
-							"http://54.201.1.107/php/maxUserID.php");
-					
-					httppost.setEntity(new UrlEncodedFormEntity(null, "UTF-8"));
-					HttpResponse response = httpclient.execute(httppost);
-
-					HttpEntity entity = response.getEntity();
-					isr1 = entity.getContent();
-					
-				}catch (Exception e) {
-					Log.e("log_tag", "Error in http connection " + e.toString());
-
-				}*/
-				/*
-				try {
-
-					BufferedReader reader = new BufferedReader(
-							new InputStreamReader(isr1, "iso-8859-1"), 8);
-					StringBuilder sb = new StringBuilder();
-					String line = reader.readLine();
-					sb.append(line);
-					String result = sb.toString();
-					max = Integer.parseInt(result);
-				    max=max +1;
-				} catch (Exception e) {
-					Log.e("log_tag", "Error  converting result " + e.toString());
-				}*/
-				
 				
 				String result = "";
 				InputStream isr = null;

@@ -16,6 +16,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.example.listObjects.ReviewsObject;
 
+/**
+ * This class still needs to :
+ * 1. Load the proper image, title, overall rating, following, which will most likely be done through
+ * communicating with the RatingsActivity class. Everything from the activity_reviews.xml file
+ * 
+ *2. populate each element of the reviewsList in the same manner as in the followers/followingActivity
+ *classes. These elements are found in the reviews_layout.xml file
+ *
+ *3. set the onclick listener for the image in the getView method to full screen the image
+ */
 public class ReviewsActivity extends Activity{
 	private Button backButton;
 	private ListView list;
@@ -36,24 +46,21 @@ public class ReviewsActivity extends Activity{
 			
 			@Override
 			public void onClick(View v) {
-				Intent goToUserPage = new Intent(v.getContext(),
-						UserHomeActivity.class);
-				startActivityForResult(goToUserPage, 0);
+				Intent goToMenuPage = new Intent(v.getContext(),
+						MenuActivity.class);
+				startActivityForResult(goToMenuPage, 0);
 				//TODO: determine if right class?
 			}
 		});
 		
-		list = (ListView)findViewById(R.id.reviewsList);
-		populateList();
-		
 		image = (ImageView)findViewById(R.id.reviewsImage);
-		//TODO: full screen on click
+		
 		
 		title = (TextView)findViewById(R.id.reviewsTitle);
-		populateTitle();
+		
 		
 		userName = (TextView)findViewById(R.id.reviewsUserName);
-		populateUser();
+		
 		userName.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -66,51 +73,11 @@ public class ReviewsActivity extends Activity{
 		});
 		
 		checkBoxFollowing =(CheckBox)findViewById(R.id.reviewsCheckBox);
-		populateCheckBox();
 		
 		score = (TextView)findViewById(R.id.reviewsScore);
-		populateScore();
-		
 		populateListView();
 	}
-	private void populateScore() {
-		// TODO Auto-generated method stub
-		
-	}
-	private void populateCheckBox() {
-		// TODO Auto-generated method stub
-		
-	}
-	private void populateUser() {
-		// TODO Auto-generated method stub
-		
-	}
-	private void populateTitle() {
-		// TODO Auto-generated method stub
-		
-	}
-	private void populateList() {
-		/*
-		Cursor cursor = myDb.getAllRows();
-		
-		//allow activity to manage cursor
-		startManagingCursor(cursor);
-		
-		//setup mapping from cursor to fields
-		String[] fromFieldNames = new String[]{"username"};
-		int[] toViewIDs = new int[]{R.id.pageReviewUser};
-		
-		//create adapter to map one element of db to element of ui
-		SimpleCursorAdapter mySCA = new SimpleCursorAdapter(
-				this, 
-				R.layout.reviews_layout,
-				cursor,
-				fromFieldNames, 
-				toViewIDs,
-				0);
-		
-		*/
-	}
+	
 	private void populateListView() {
 		ArrayAdapter<ReviewsObject> myAdapter = new MyListAdapter();
 		ListView rList = (ListView) findViewById(R.layout.activity_reviews);
@@ -134,11 +101,7 @@ public class ReviewsActivity extends Activity{
 			ImageView avatar = (ImageView)itemView.findViewById(R.id.pageReviewAvatar);
 			//TODO: set image
 			//TODO: set onclick listener
-			
-			ImageView image = (ImageView)itemView.findViewById(R.id.pageReivewImage);
-			//TODO: set image
-			//TODO: set on click listneer
-			
+
 			TextView review = (TextView)itemView.findViewById(R.id.pageReviewReview);
 			review.setText(currentObject.getReview());
 
@@ -157,19 +120,7 @@ public class ReviewsActivity extends Activity{
 			
 			TextView rating0 = (TextView)itemView.findViewById(R.id.pageReviewScore0);
 			rating0.setText(String.valueOf(currentObject.getRating1()));
-			
-			TextView rating1 = (TextView)itemView.findViewById(R.id.pageReviewScore1);
-			rating1.setText(String.valueOf(currentObject.getRating2()));
-			
-			TextView rating2 = (TextView)itemView.findViewById(R.id.pageReviewScore2);
-			rating2.setText(String.valueOf(currentObject.getRating3()));
-			
-			TextView rating3 = (TextView)itemView.findViewById(R.id.pageReviewScore3);
-			rating3.setText(String.valueOf(currentObject.getRating4()));
-			
-			TextView rating4 = (TextView)itemView.findViewById(R.id.pageReviewScore4);
-			rating4.setText(String.valueOf(currentObject.getRating5()));
-			
+					
 			CheckBox following = (CheckBox)itemView.findViewById(R.id.pageReviewFollowing);
 			following.setChecked(currentObject.isFollowing());
 			following.setOnClickListener(new View.OnClickListener() {
