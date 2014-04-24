@@ -118,7 +118,7 @@ public class ReviewsActivity extends Activity{
 				}
 			});
 			
-			TextView rating0 = (TextView)itemView.findViewById(R.id.pageReviewScore0);
+			TextView rating0 = (TextView)itemView.findViewById(R.id.pageReviewScore);
 			rating0.setText(String.valueOf(currentObject.getRating1()));
 					
 			CheckBox following = (CheckBox)itemView.findViewById(R.id.pageReviewFollowing);

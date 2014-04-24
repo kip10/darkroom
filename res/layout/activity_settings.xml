@@ -1,191 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".SettingsActivity" >
+    android:layout_height="match_parent" >
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+    <Button
+        android:id="@+id/settingsMenuButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:text="Menu" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin" >
+    <CheckBox
+        android:id="@+id/settingsForHire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settingsMenuButton"
+        android:layout_centerHorizontal="true"
+        android:text="For Hire" />
 
-            <TextView
-                android:id="@+id/ratingRatingField0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Settings:"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/settingsAllowReviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settingsForHire"
+        android:layout_centerHorizontal="true"
+        android:text="Allow Reviews" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin" >
+    <EditText
+        android:id="@+id/settingsAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/settingsAllowReviews"
+        android:layout_marginTop="33dp"
+        android:ems="10" >
 
-                <TextView
-                    android:id="@+id/userHomeUsername"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="\tFor Hire:\t"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+        <requestFocus />
+    </EditText>
 
-                <CheckBox
-                    android:id="@+id/homeForHireText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-            </LinearLayout>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/settingsAllowReviews"
+        android:layout_marginTop="14dp"
+        android:text="About Me: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin" >
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/settingsAbout"
+        android:layout_marginTop="15dp"
+        android:text="My Equipment:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
-                    android:id="@+id/uploadLayoutUser"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="\tAllow Reviews:\t"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+    <EditText
+        android:id="@+id/settingsEquipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView2"
+        android:ems="10" />
 
-                <CheckBox
-                    android:id="@+id/homeAllowReviewsText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-            </LinearLayout>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/settingsEquipment"
+        android:layout_marginTop="22dp"
+        android:text="My Style:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin" >
+    <EditText
+        android:id="@+id/settingsStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView3"
+        android:ems="10" />
 
-                <TextView
-                    android:id="@+id/ratingUserName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="\tAllow Guestbook:\t"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/settingsStyle"
+        android:layout_marginTop="17dp"
+        android:text="Work Interests:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <CheckBox
-                    android:id="@+id/homeAllowGuestbookText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"         
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-            </LinearLayout>
+    <EditText
+        android:id="@+id/settingsWorkInterest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView4"
+        android:ems="10" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin" >
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/settingsWorkInterest"
+        android:text="Website:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="\tAllow Comments:\t"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <CheckBox
-                    android:id="@+id/homeAllowCommentsText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Equipment: "
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-            <EditText
-                android:id="@+id/homeEquipmentText"
-        		android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
-        		android:ems="10"
-        		android:text= "testedittext"/>
-            
-            <TextView
-                android:id="@+id/pageReviewScore0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="About Me: "
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-            <EditText
-                android:id="@+id/homeAboutText"
-        		android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
-        		android:ems="10"
-        		android:text= "testedittext"/>
-            
-            <TextView
-                android:id="@+id/pageReviewScore1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="My Style: "
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-            <EditText
-                android:id="@+id/homeStyleText"
-        		android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
-        		android:ems="10"
-        		android:text= "testedittext"/>
-            
-            <TextView
-                android:id="@+id/pageReviewScore2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Work Interests: "
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-            <EditText
-                android:id="@+id/homeWorkInterestText"
-        		android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
-        		android:ems="10"
-        		android:text= "testedittext"/>
-            
-            <TextView
-                android:id="@+id/pageReviewScore3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Website: "
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-            <EditText
-                android:id="@+id/homeWebsiteText"
-        		android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
-        		android:ems="10"
-        		android:text= "testedittext"/>
-            
-        </LinearLayout>
-    </ScrollView>
+    <EditText
+        android:id="@+id/settingsWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:ems="10" />
 
 </RelativeLayout>

@@ -1,113 +1,66 @@
 package com.example.darkroom;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.LinkedList;
 import java.util.List;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 
+/**
+ * each field in this class needs to be loaded for the proper settings from the user 
+ * fromthe database.
+ * 
+ * Also need to set onclick listeners for the checkboxes, as well as some backend interaction
+ * for the editTexts(not sure how that will work).
+ * @author Eric
+ *
+ */
 public class SettingsActivity extends Activity {
 	private EditText equipmentText;
 	private EditText styleText;
 	private EditText websiteText;
 	private EditText workText;
+	private EditText aboutText;
 	
 	private CheckBox forHire;
 	private CheckBox reviewsAllowed;
 	private CheckBox guestBookAllowed;
 	private CheckBox commentsAllowed;
+
+	private Button menuButton;
 	
-	private List<EditText> etList;
-	private List<CheckBox> tvList;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		equipmentText = (EditText)findViewById(R.id.homeEquipmentText);
-		styleText = (EditText)findViewById(R.id.homeStyleText);
-		websiteText = (EditText)findViewById(R.id.homeWebsiteText);
-		workText = (EditText) findViewById(R.id.homeWorkInterestText);
+		equipmentText = (EditText)findViewById(R.id.settingsEquipment);
+		styleText = (EditText)findViewById(R.id.settingsStyle);
+		websiteText = (EditText)findViewById(R.id.settingsWebsite);
+		workText = (EditText) findViewById(R.id.settingsWorkInterest);
+		aboutText = (EditText)findViewById(R.id.settingsAbout);
 		
-		etList = new LinkedList<EditText>();
-		etList.add(equipmentText);
-		etList.add(styleText);
-		etList.add(websiteText);
-		etList.add(workText);
+		forHire = (CheckBox)findViewById(R.id.settingsForHire);
+		reviewsAllowed = (CheckBox)findViewById(R.id.settingsAllowReviews);
 		
-		for(EditText item : etList){
-			try {
-				setEditText(item);
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		
-		forHire = (CheckBox)findViewById(R.id.homeForHireText);
-		reviewsAllowed = (CheckBox)findViewById(R.id.homeAllowReviewsText);
-		guestBookAllowed = (CheckBox)findViewById(R.id.homeAllowGuestbookText);
-		commentsAllowed = (CheckBox)findViewById(R.id.homeAllowCommentsText);
-		
-		tvList = new LinkedList<CheckBox>();
-		tvList.add(forHire);
-		tvList.add(reviewsAllowed);
-		tvList.add(guestBookAllowed);
-		tvList.add(commentsAllowed);
-		
-		try {
-			for(CheckBox textItem: tvList){
-				setCheckBox(textItem);
+		menuButton = (Button)findViewById(R.id.settingsMenuButton); 
+		menuButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent goToMenuPage = new Intent(v.getContext(),
+						MenuActivity.class);
+				startActivityForResult(goToMenuPage, 0);
 				
 			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+		});
 		setContentView(R.layout.activity_settings);
 	}
 
-	private void setEditText(EditText et) throws Exception{
-		/*
-		ResultSet rs;
-		switch(et.getId()){
-		case R.id.homeEquipmentText:
-			try {
-				rs = DatabaseQueryer.connectToAndQueryDatabase("SELECT equipment FROM users u WHERE"
-						+ "u.username = " + MainActivity.getUserName());
-				et.setText(rs.getString("equipment"));
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			break;
-		//TODO: IMPLEMENT THE QUERYING FIELDS FOR THE OTHER EDITTEXTS
-		
-		}*/
-	}
-	
-	private void setCheckBox(CheckBox cb) throws SQLException, Exception {
-		/*ResultSet rs;
-		switch(cb.getId()){
-		case R.id.homeForHireText:
-			rs = DatabaseQueryer.connectToAndQueryDatabase("SELECT for_hire FROM users u WHERE "
-					+ "u.username = " +MainActivity.getUserName());
-			if(rs.getByte("for_hire") == 0) cb.setChecked(false);
-			else cb.setChecked(true);
-			break;
-		//TODO: IMPLEMENT QUERYING OTHER FIELDS AS WELL
-			//after the PHP gets implemented
-		}*/
-	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
