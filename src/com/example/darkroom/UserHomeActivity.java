@@ -12,11 +12,16 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-
+/**
+ * Need to upload the avatar, about text, etc. from the database from this page.
+ * @author Eric
+ *
+ */
 public class UserHomeActivity extends Activity {
 	private Button followersButton;
 	private Button followingButton;
 	private Button uploadsButton;
+	private Button menuButton;
 	
 	private CheckBox followCheckBox;
 	
@@ -37,13 +42,7 @@ public class UserHomeActivity extends Activity {
 		aboutText = (TextView)findViewById(R.id.userHomeAboutTextView);
 		
 		avatar = (ImageView)findViewById(R.id.userHomeAvatar);
-	
-		setCheckBox(followCheckBox);
-		setUserName(userName);
-		setAboutText(aboutText);
-		
-		setAvatar(avatar);
-		
+
 
 		followingButton = (Button)findViewById(R.id.userHomeFollowingButton);
 		followingButton.setOnClickListener(new View.OnClickListener() {
@@ -80,26 +79,19 @@ public class UserHomeActivity extends Activity {
 				
 			}
 		});
-	}
-
-	private void setUserName(TextView userName2) {
-		// TODO Auto-generated method stub
 		
-	}
-
-	private void setAboutText(TextView aboutText2) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private void setAvatar(ImageView avatar2) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private void setCheckBox(CheckBox cb) {
-		//TODO: implement from php 
-		
+		menuButton = (Button)findViewById(R.id.userHomeMenuButton);
+		menuButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent goToMenuPage = new Intent(v.getContext(),
+						MenuActivity.class);
+				startActivityForResult(goToMenuPage, 0);
+				
+				
+			}
+		});
 	}
 
 	@Override

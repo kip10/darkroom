@@ -17,6 +17,11 @@ import android.widget.TextView;
 
 import com.example.listObjects.UploadObject;
 
+/**
+ * the uploadList needs to be filled the same way as the followers/following fields
+ * @author Eric
+ *
+ */
 public class UploadsActivity extends Activity{
 	private Button backButton;
 	private ListView list;
