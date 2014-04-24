@@ -32,22 +32,12 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/menuUsername"
+        android:id="@+id/ratingBy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/ratingTitle"
         android:layout_centerHorizontal="true"
         android:text="by: "
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/ratingUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/menuUsername"
-        android:layout_alignBottom="@+id/menuUsername"
-        android:layout_alignParentRight="true"
-        android:text="User"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
@@ -97,5 +87,15 @@
         android:layout_alignBottom="@+id/ratingBackButton"
         android:layout_alignParentRight="true"
         android:text="Submit" />
+
+    <TextView
+        android:id="@+id/ratingUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ratingBy"
+        android:layout_alignBottom="@+id/ratingBy"
+        android:layout_alignRight="@+id/ratingRatingEntry0"
+        android:text="User"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

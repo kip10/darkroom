@@ -14,18 +14,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Rating Activity still needs back end interaction after submitting the rating,
+ * as well as loading everything (username, image, title, score in score0), from the PhotoFeed 
+ * that generated this view  
+ * 
+ *
+ */
 public class RatingActivity extends Activity {
 	private Button backButton;
 	private Button submitButton;
 	private ImageView image;
 	private TextView userName;
-	
+	private TextView title;
 	private TextView score0;
-	private TextView score1;
-	private TextView score2;
-	private TextView score3;
-	private TextView score4;
-	
 	private EditText edit0;
 	
 	@Override
@@ -60,7 +62,7 @@ public class RatingActivity extends Activity {
 		score0 = (TextView)findViewById(R.id.ratingRatingScore0);
 		//TODO: Populate scores
 		
-		
+		title = (TextView)findViewById(R.id.ratingTitle);
 		
 		edit0 = (EditText)findViewById(R.id.ratingRatingEntry0);
 		

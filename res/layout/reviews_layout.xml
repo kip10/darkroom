@@ -65,7 +65,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:id="@+id/menuUsername"
+        android:id="@+id/ratingUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/videoFeedUserName"

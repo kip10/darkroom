@@ -19,6 +19,21 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
+/**
+ * FollowersActivity still needs to have backend interaciton. Every entry in the followList,
+ * which is of type FollowObject, contains the followers avatar, name, and whether or not 
+ * the current user, which can be accessed at MainActivity.getUserName(), is following that user
+ * 
+ * From this, the list still has to be populated from the backend.
+ * 
+ * The layout for this activity is found in the activity_following.xml file, and each element
+ * of the listview will be of the format found in follow_layout.xml
+ * 
+ * If each element in followList is populated in followList, then in the getViewMethod, 
+ * you will easily be able to populate the ListView by simply setting the ImageView, TextViews,
+ * etc. by doing myImageView.setImage(currentObject.getImage()), etc.
+ */
 public class FollowersActivity extends Activity{
 	private Button backButton;
 	private ListView list;
