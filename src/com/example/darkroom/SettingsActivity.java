@@ -13,7 +13,7 @@ import android.widget.EditText;
 
 /**
  * each field in this class needs to be loaded for the proper settings from the user 
- * fromthe database.
+ * from the database.
  * 
  * Also need to set onclick listeners for the checkboxes, as well as some backend interaction
  * for the editTexts(not sure how that will work).

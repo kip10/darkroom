@@ -107,7 +107,7 @@ public class FeedActivity extends Activity {
 			});
 			
 			
-			TextView userName = (TextView)itemView.findViewById(R.id.pageFeedUserName);
+			TextView userName = (TextView)itemView.findViewById(R.id.videoFeedUserName);
 			userName.setText(currentObject.getUsername());
 			userName.setOnClickListener(new View.OnClickListener() {
 				
@@ -120,7 +120,7 @@ public class FeedActivity extends Activity {
 				}
 			});
 			
-			TextView title = (TextView)itemView.findViewById(R.id.pageFeedTitle);
+			TextView title = (TextView)itemView.findViewById(R.id.videoFeedTitle);
 			title.setText(currentObject.getTitle());
 			title.setOnClickListener(new View.OnClickListener() {
 				
@@ -133,7 +133,7 @@ public class FeedActivity extends Activity {
 				}
 			});
 			
-			TextView rating = (TextView)itemView.findViewById(R.id.pageFeedRating);
+			TextView rating = (TextView)itemView.findViewById(R.id.videoFeedRating);
 			rating.setText(String.valueOf(currentObject.getRating()));
 			rating.setOnClickListener(new View.OnClickListener() {
 				

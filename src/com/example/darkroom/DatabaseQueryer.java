@@ -34,7 +34,7 @@ public class DatabaseQueryer {
 	 * @return JSONArray containing the results of the query.
 	 * @throws JSONException -- if there is an error parsing data to JSONArray object
 	 */
-	public static JSONArray getData(String phpFileName) throws JSONException {
+	public static String getData(String phpFileName) {
 		String result = "";
 		InputStream isr = null;
 		try {
@@ -77,7 +77,7 @@ public class DatabaseQueryer {
 		 * 
 		 * Log.e("log_tag", "Error Parsing Data " + e.toString()); }
 		 */
-		return new JSONArray(result);
+		return result;
 
 	}
 

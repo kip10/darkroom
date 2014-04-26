@@ -42,7 +42,7 @@ import android.widget.Toast;
  * where i use the login.php script to do so.
  */
 public class MainActivity extends Activity {
-	EditText userNameText;
+	EditText userEmail;
 	EditText passwordText;
 	TextView errorText;
 	Button loginButton;
@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
 
 		StrictMode.setThreadPolicy(policy); 
 		
-		userNameText = (EditText) findViewById(R.id.userTextField);
+		userEmail = (EditText) findViewById(R.id.userTextField);
 		passwordText = (EditText) findViewById(R.id.passwordTextField);
 		errorText = (TextView) findViewById(R.id.statusText);
 
@@ -70,7 +70,7 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) { // go to next screen
-				String name = userNameText.getText().toString();
+				String name = userEmail.getText().toString();
 				String pass = passwordText.getText().toString();
 
 				String result = "";
