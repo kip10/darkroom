@@ -3,7 +3,7 @@ package com.example.darkroom;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.listObjects.FeedObject;
+import com.example.listObjects.PhotoFeedObject;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -20,7 +20,7 @@ import android.widget.TextView;
 public class FeedActivity extends Activity {
 	private Button backButton;
 	private ListView list;
-	private List<FeedObject> feedList = new ArrayList<FeedObject>(200);
+	private List<PhotoFeedObject> feedList = new ArrayList<PhotoFeedObject>(200);
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -74,13 +74,13 @@ public class FeedActivity extends Activity {
 		return true;
 	}
 	private void populateListView() {
-		ArrayAdapter<FeedObject> myAdapter = new MyListAdapter();
+		ArrayAdapter<PhotoFeedObject> myAdapter = new MyListAdapter();
 		ListView feedList = (ListView) findViewById(R.layout.activity_following);
 		feedList.setAdapter(myAdapter);
 		
 	}
 	
-	private class MyListAdapter extends ArrayAdapter<FeedObject>{
+	private class MyListAdapter extends ArrayAdapter<PhotoFeedObject>{
 		public MyListAdapter(){
 			super(FeedActivity.this, R.layout.feed_layout, feedList);
 		}
@@ -92,7 +92,7 @@ public class FeedActivity extends Activity {
 			if(itemView==null){
 				itemView = getLayoutInflater().inflate(R.layout.feed_layout, parent, false);
 			}
-			FeedObject currentObject = feedList.get(position);
+			PhotoFeedObject currentObject = feedList.get(position);
 			
 			//fill fields
 			ImageView image = (ImageView)itemView.findViewById(R.id.pageFeedImage);
