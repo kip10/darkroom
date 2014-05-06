@@ -1,5 +1,7 @@
 package com.example.listObjects;
 
+import android.net.Uri;
+
 public class ReviewsObject {
 	private String review;
 	private String userName;
@@ -9,11 +11,13 @@ public class ReviewsObject {
 	private int rating3;
 	private int rating4;
 	private int rating5;
-	//Strings?
-	//TODO: implement image and avatar
+
+	private Uri image;
+	private Uri avatar;
 	
 	public ReviewsObject(String review, String userName, boolean following,
-			int rating1, int rating2, int rating3, int rating4, int rating5) {
+			int rating1, int rating2, int rating3, int rating4, int rating5,
+			Uri image, Uri avatar) {
 		super();
 		this.review = review;
 		this.userName = userName;
@@ -23,6 +27,8 @@ public class ReviewsObject {
 		this.rating3 = rating3;
 		this.rating4 = rating4;
 		this.rating5 = rating5;
+		this.image = image;
+		this.avatar = avatar;
 	}
 
 	public String getReview() {
@@ -49,5 +55,16 @@ public class ReviewsObject {
 	public int getRating5() {
 		return rating5;
 	}
-	
+	public Uri getImage(){
+		return image;
+	}
+	public Uri getAvatar(){
+		return avatar;
+	}
+	public void setImage(Uri imageLocation){
+		image = imageLocation;
+	}
+	public void setAvatar(Uri avatarLocation){
+		avatar = avatarLocation;
+	}
 }

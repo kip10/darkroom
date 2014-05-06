@@ -1,12 +1,13 @@
 package com.example.listObjects;
 
-import java.io.File;
+
+import android.net.Uri;
 
 public class FollowObject {
 	private String username;
 	private boolean following;
-	private File avatar;
-	public FollowObject(String username, boolean following, File avatar) {
+	private Uri avatar;
+	public FollowObject(String username, boolean following, Uri avatar) {
 		super();
 		this.username = username;
 		this.following = following;
@@ -18,7 +19,7 @@ public class FollowObject {
 	public boolean isFollowing() {
 		return following;
 	}
-	public File getAvatar() {
+	public Uri getAvatar() {
 		return avatar;
 	}
 	

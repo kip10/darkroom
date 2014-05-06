@@ -1,12 +1,11 @@
 package com.example.listObjects;
-
-import java.io.File;
+import android.net.Uri;
 
 public class UploadObject {
 	private double rating;
 	private String username;
 	private String title;
-	private File image;
+	private Uri image;
 	private boolean following;
 	public double getRating() {
 		return rating;
@@ -17,14 +16,14 @@ public class UploadObject {
 	public String getTitle() {
 		return title;
 	}
-	public File getImage() {
+	public Uri getImage() {
 		return image;
 	}
 	public boolean isFollowing() {
 		return following;
 	}
 	public UploadObject(double rating, String username, String title,
-			File image, boolean following) {
+			Uri image, boolean following) {
 		super();
 		this.rating = rating;
 		this.username = username;
