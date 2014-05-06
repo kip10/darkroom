@@ -2,6 +2,11 @@ package com.example.darkroom;
 
 import java.io.File;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import android.util.Log;
+
 public class Controller {
 
 	private static String userName;
@@ -27,8 +32,19 @@ public class Controller {
 		String data;
 		if (userName == null) {
 			data = DatabaseQueryer.getData("userName");
-			//parse
-			//set userName
+
+			try { 
+				String s = ""; 
+				JSONArray jArray = new JSONArray(data); 
+					for (int i = 0; i < jArray.length(); i++) { 
+						JSONObject json = jArray.getJSONObject(i); 
+						s = s + json.getString("displayname"); 
+					}
+					userName = s;
+				} catch (Exception e) {
+					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
+				}
+			
 			return userName;
 		}
 		return userName;
@@ -41,8 +57,19 @@ public class Controller {
 		String data;
 		if (userAvatarPath == null) {
 			data = DatabaseQueryer.getData("userAvatarPath");
-			//parse
-			//set userAvatarPath
+
+			try { 
+				String s = ""; 
+				JSONArray jArray = new JSONArray(data); 
+					for (int i = 0; i < jArray.length(); i++) { 
+						JSONObject json = jArray.getJSONObject(i); 
+						s = s + json.getString("userAvatarPath"); 
+					}
+					userAvatarPath = s;
+				} catch (Exception e) {
+					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
+				}
+			
 			return userAvatarPath;
 		}
 		return userAvatarPath;
@@ -55,8 +82,19 @@ public class Controller {
 		String data;
 		if (equipmentText == null) {
 			data = DatabaseQueryer.getData("equipmentText");
-			//parse
-			//set equipmentText
+			
+			try { 
+				String s = ""; 
+				JSONArray jArray = new JSONArray(data); 
+					for (int i = 0; i < jArray.length(); i++) { 
+						JSONObject json = jArray.getJSONObject(i); 
+						s = s + json.getString("equipment"); 
+					}
+					equipmentText = s;
+				} catch (Exception e) {
+					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
+				}
+			
 			return equipmentText;
 		}
 		return equipmentText;
@@ -69,8 +107,19 @@ public class Controller {
 		String data;
 		if (styleText == null) {
 			data = DatabaseQueryer.getData("styleText");
-			//parse
-			//set styleText
+			
+			try { 
+				String s = ""; 
+				JSONArray jArray = new JSONArray(data); 
+					for (int i = 0; i < jArray.length(); i++) { 
+						JSONObject json = jArray.getJSONObject(i); 
+						s = s + json.getString("style"); 
+					}
+					styleText = s;
+				} catch (Exception e) {
+					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
+				}
+			
 			return styleText;
 		}
 		return styleText;
@@ -83,8 +132,19 @@ public class Controller {
 		String data;
 		if (websiteText == null) {
 			data = DatabaseQueryer.getData("websiteText");
-			//parse
-			//set styleText
+
+			try { 
+				String s = ""; 
+				JSONArray jArray = new JSONArray(data); 
+					for (int i = 0; i < jArray.length(); i++) { 
+						JSONObject json = jArray.getJSONObject(i); 
+						s = s + json.getString("website"); 
+					}
+					websiteText = s;
+				} catch (Exception e) {
+					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
+				}
+			
 			return websiteText;
 		}
 		return websiteText;
@@ -97,8 +157,19 @@ public class Controller {
 		String data;
 		if (workText == null) {
 			data = DatabaseQueryer.getData("workText");
-			//parse
-			//set workText
+
+			try { 
+				String s = ""; 
+				JSONArray jArray = new JSONArray(data); 
+					for (int i = 0; i < jArray.length(); i++) { 
+						JSONObject json = jArray.getJSONObject(i); 
+						s = s + json.getString("work_interests"); 
+					}
+					workText = s;
+				} catch (Exception e) {
+					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
+				}
+			
 			return workText;
 		}
 		return workText;
@@ -110,9 +181,20 @@ public class Controller {
 	public static String getAboutText() {
 		String data;
 		if (aboutText == null) {
-			data = DatabaseQueryer.getData("aboutText");
-			//parse
-			//set aboutText
+			data = DatabaseQueryer.getData("about");
+
+			try { 
+				String s = ""; 
+				JSONArray jArray = new JSONArray(data); 
+					for (int i = 0; i < jArray.length(); i++) { 
+						JSONObject json = jArray.getJSONObject(i); 
+						s = s + json.getString("about"); 
+					}
+					aboutText = s;
+				} catch (Exception e) {
+					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
+				}
+			
 			return aboutText;
 		}
 		return aboutText;
@@ -125,8 +207,25 @@ public class Controller {
 		String data;
 		if (forHire == null) {
 			data = DatabaseQueryer.getData("forHire");
-			//parse
-			//set forHire
+
+			try { 
+				String s = ""; 
+				JSONArray jArray = new JSONArray(data); 
+					for (int i = 0; i < jArray.length(); i++) { 
+						JSONObject json = jArray.getJSONObject(i); 
+						s = s + json.getString("for_hire"); 
+					}
+					int fh = Integer.parseInt(s);
+					if(fh == 1) {
+						forHire = true;
+					} else {
+						forHire = false;
+					}
+						
+				} catch (Exception e) {
+					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
+				}
+			
 			return forHire;
 		}
 		return forHire;
@@ -139,8 +238,25 @@ public class Controller {
 		String data;
 		if (reviewsAllowed == null) {
 			data = DatabaseQueryer.getData("reviewsAllowed");
-			//parse
-			//set reviewsAllowed
+
+			try { 
+				String s = ""; 
+				JSONArray jArray = new JSONArray(data); 
+					for (int i = 0; i < jArray.length(); i++) { 
+						JSONObject json = jArray.getJSONObject(i); 
+						s = s + json.getString("reviews_allowed"); 
+					}
+					int fh = Integer.parseInt(s);
+					if(fh == 1) {
+						reviewsAllowed = true;
+					} else {
+						reviewsAllowed = false;
+					}
+						
+				} catch (Exception e) {
+					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
+				}
+			
 			return reviewsAllowed;
 		}
 		return reviewsAllowed;
@@ -153,8 +269,25 @@ public class Controller {
 		String data;
 		if (guestBookAllowed == null) {
 			data = DatabaseQueryer.getData("guestBookAllowed");
-			//parse
-			//set guestBookAllowed
+
+			try { 
+				String s = ""; 
+				JSONArray jArray = new JSONArray(data); 
+					for (int i = 0; i < jArray.length(); i++) { 
+						JSONObject json = jArray.getJSONObject(i); 
+						s = s + json.getString("guestbook_allowed"); 
+					}
+					int fh = Integer.parseInt(s);
+					if(fh == 1) {
+						guestBookAllowed = true;
+					} else {
+						guestBookAllowed = false;
+					}
+						
+				} catch (Exception e) {
+					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
+				}
+			
 			return guestBookAllowed;
 		}
 		return guestBookAllowed;
@@ -167,8 +300,25 @@ public class Controller {
 		String data;
 		if (commentsAllowed == null) {
 			data = DatabaseQueryer.getData("commentsAllowed");
-			//parse
-			//set forHire
+
+			try { 
+				String s = ""; 
+				JSONArray jArray = new JSONArray(data); 
+					for (int i = 0; i < jArray.length(); i++) { 
+						JSONObject json = jArray.getJSONObject(i); 
+						s = s + json.getString("comments_allowed"); 
+					}
+					int fh = Integer.parseInt(s);
+					if(fh == 1) {
+						commentsAllowed = true;
+					} else {
+						commentsAllowed = false;
+					}
+						
+				} catch (Exception e) {
+					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
+				}
+			
 			return commentsAllowed;
 		}
 		return commentsAllowed;
@@ -181,8 +331,19 @@ public class Controller {
 		String data;
 		if (photoTitle == null) {
 			data = DatabaseQueryer.getData("photoTitle");
-			//parse
-			//set forHire
+
+			try { 
+				String s = ""; 
+				JSONArray jArray = new JSONArray(data); 
+					for (int i = 0; i < jArray.length(); i++) { 
+						JSONObject json = jArray.getJSONObject(i); 
+						s = s + json.getString("filename"); 
+					}
+					photoTitle = s;
+				} catch (Exception e) {
+					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
+				}
+			
 			return photoTitle;
 		}
 		return photoTitle;

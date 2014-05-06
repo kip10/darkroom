@@ -103,8 +103,17 @@ public class FollowersActivity extends Activity{
 			}
 			FollowObject currentObject = followList.get(position);
 			ImageView avatar = (ImageView)itemView.findViewById(R.id.itemLayoutAvatar);
-			//TODO: set image
-			//TODO: set onclick listener
+			avatar.setImageURI(currentObject.getAvatar());
+			avatar.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent goToUserPage = new Intent(v.getContext(),
+							UserHomeActivity.class);
+					startActivityForResult(goToUserPage, 0);
+					
+				}
+			});
 			
 			TextView username = (TextView)itemView.findViewById(R.id.itemLayoutUserName);
 			username.setText(currentObject.getUsername());

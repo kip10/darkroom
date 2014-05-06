@@ -108,6 +108,7 @@ public class PhotoFeedActivity extends Activity {
 			//fill fields
 			ImageView image = (ImageView)itemView.findViewById(R.id.pageFeedImage);
 			//TODO: set image
+			image.setImageURI(currentObject.getAvatar());
 			image.setOnClickListener(new View.OnClickListener() {
 				
 				@Override

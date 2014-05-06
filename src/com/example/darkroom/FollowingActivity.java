@@ -56,6 +56,7 @@ public class FollowingActivity extends Activity{
 		populateList();
 		populateListView();
 	}
+	
 	private void populateList() {
 		/*
 		Cursor cursor = myDb.getAllRows();
