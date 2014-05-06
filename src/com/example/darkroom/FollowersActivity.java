@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -38,6 +39,7 @@ public class FollowersActivity extends Activity{
 	private Button backButton;
 	private ListView list;
 	private List<FollowObject> followList = new ArrayList<FollowObject>(100);
+	private TextView username;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
@@ -55,12 +57,15 @@ public class FollowersActivity extends Activity{
 				
 			}
 		});
+		username = (TextView)findViewById(R.string.userName);
 		
 		list = (ListView)findViewById(R.id.FollowingList);
 		populateList();
 		populateListView();
 	}
 	private void populateList() {
+		
+		
 		/*
 		Cursor cursor = myDb.getAllRows();
 		
