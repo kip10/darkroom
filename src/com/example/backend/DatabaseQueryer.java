@@ -81,7 +81,7 @@ public class DatabaseQueryer {
 
 	}
 
-	public void gay() throws IOException{
+	public void test() throws IOException{
 		URL url = new URL("http://localhost/CD/user/test");
 	    String result = "";
 	    String data = "fName=" + URLEncoder.encode("Atli", "UTF-8");

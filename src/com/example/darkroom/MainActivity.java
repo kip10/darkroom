@@ -78,7 +78,7 @@ public class MainActivity extends Activity {
 				try {
 					HttpClient httpclient = new DefaultHttpClient();
 					HttpPost httppost = new HttpPost(
-							"http://54.201.1.107/php/login.php");
+							"http://54.201.1.107/php/loginTrue.php");
 					List<NameValuePair> params = new ArrayList<NameValuePair>(2);
 					params.add(new BasicNameValuePair("email", name));
 					params.add(new BasicNameValuePair("pass", pass));
@@ -107,7 +107,8 @@ public class MainActivity extends Activity {
 
 				// parse json data
 				try {
-					if (result.equals("true")) {
+					if (result.equalsIgnoreCase("true")) {
+						userName = name;
 						Intent goToMenuPage = new Intent(v.getContext(),
 								MenuActivity.class);
 						startActivityForResult(goToMenuPage, 0);

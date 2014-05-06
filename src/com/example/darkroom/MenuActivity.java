@@ -69,6 +69,7 @@ public class MenuActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				UserHomeActivity.setUsername(MainActivity.getUserName());
 				Intent goTohomePage = new Intent(v.getContext(),
 						UserHomeActivity.class);
 				startActivityForResult(goTohomePage, 0);

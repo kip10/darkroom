@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Need to upload the avatar, about text, etc. from the database from this page.
@@ -29,16 +30,39 @@ public class UserHomeActivity extends Activity {
 	private TextView aboutText;
 	
 	private ImageView avatar;
+	//Field variables set from elsewhere to 
+	private static String username;
 	
-	
+	private static String getUsername(){
+		return username;
+	}
+	public static void setUsername(String name){
+		username=name;
+	}
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_user_home);
 		
 		followCheckBox = (CheckBox)findViewById(R.id.userHomeFollowCheck);
-		
+		followCheckBox.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if(getUsername().equals(MainActivity.getUserName())){
+					// can't follow self
+					String message = "Error: Can't follow self";
+					Toast.makeText(getBaseContext(), message, Toast.LENGTH_LONG).show();
+					followCheckBox.setChecked(false); 
+					//make assumption that checkbox won't be checked if your home page
+				}
+				else{
+					//TODO: php script for following
+				}
+			}
+		});
 		userName = (TextView)findViewById(R.id.userHomeUsername);
+		userName.setText(getUsername());
 		aboutText = (TextView)findViewById(R.id.userHomeAboutTextView);
 		
 		avatar = (ImageView)findViewById(R.id.userHomeAvatar);
