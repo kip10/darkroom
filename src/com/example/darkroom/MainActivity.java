@@ -145,6 +145,8 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
+	
+	
 	public static String getUserName() {
 		return userName;
 	}
