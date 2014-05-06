@@ -1,8 +1,14 @@
 package com.example.darkroom;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import com.example.backend.DatabaseQueryer;
+
 import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -64,9 +70,12 @@ public class UserHomeActivity extends Activity {
 		userName = (TextView)findViewById(R.id.userHomeUsername);
 		userName.setText(getUsername());
 		aboutText = (TextView)findViewById(R.id.userHomeAboutTextView);
+		aboutText.setText(DatabaseQueryer.getData("getAboutText"));
+		
 		
 		avatar = (ImageView)findViewById(R.id.userHomeAvatar);
-
+		Uri avi = Uri.parse(DatabaseQueryer.getData("getAvatar"));
+		avatar.setImageURI(avi);
 
 		followingButton = (Button)findViewById(R.id.userHomeFollowingButton);
 		followingButton.setOnClickListener(new View.OnClickListener() {

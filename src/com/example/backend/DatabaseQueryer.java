@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
 import java.net.URLEncoder;
 
@@ -63,20 +64,7 @@ public class DatabaseQueryer {
 		} catch (Exception e) {
 			Log.e("log_tag", "Error  converting result " + e.toString());
 		}
-		/*
-		 * // parse json data try { String s = ""; JSONArray jArray = new
-		 * JSONArray(result);
-		 * 
-		 * for (int i = 0; i < jArray.length(); i++) { JSONObject json =
-		 * jArray.getJSONObject(i); s = s + "Name : " +
-		 * json.getString("username") + " " + json.getString("email"); }
-		 * 
-		 * 
-		 * 
-		 * } catch (Exception e) {
-		 * 
-		 * Log.e("log_tag", "Error Parsing Data " + e.toString()); }
-		 */
+
 		return result;
 
 	}
@@ -125,5 +113,7 @@ public class DatabaseQueryer {
 	        System.out.println(result);
 	    }
 	}
+	
+
 }
 
