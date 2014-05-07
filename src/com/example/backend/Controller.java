@@ -11,13 +11,13 @@ import com.example.darkroom.DatabaseQueryer;
 
 public class Controller {
 
-	private static String displayName;
-	private static String avatarLocation;
-	private static String equipment;
-	private static String style;
-	private static String website;
-	private static String work_interests;
-	private static String about;
+	private String displayName;
+	private String avatarLocation;
+	private String equipment;
+	private String style;
+	private String website;
+	private String work_interests;
+	private String about;
 	
 	private Boolean for_hire; //need to translate 1s and 0s to boolean
 	private Boolean reviews_allowed;
@@ -25,12 +25,12 @@ public class Controller {
 	private Boolean comments_allowed;
 	
 	
-	private static String photoTitle;
-	private static String rating;
-	private static String photoPath;
+	private String photoTitle;
+	private String rating;
+	private String photoPath;
 	
 	
-	public static String getDisplayName() {
+	public String getDisplayName() {
 		String data;
 		if (userName == null) {
 			data = DatabaseQueryer.getData("getDisplayName");
@@ -51,11 +51,11 @@ public class Controller {
 		}
 		return displayName;
 	}
-	public static void setDisplayName(String displayName) {
+	public void setDisplayName(String displayName) {
 		Controller.displayName = displayName;
 	}
 	
-	public static String getAvatarLocation() {
+	public String getAvatarLocation() {
 		String data;
 		if (avatarLocation == null) {
 			data = DatabaseQueryer.getData("getAvatarLocation");
@@ -76,11 +76,11 @@ public class Controller {
 		}
 		return avatarLocation;
 	}
-	public static void setAvatarLocation(String avatarLocation) {
+	public void setAvatarLocation(String avatarLocation) {
 		Controller.avatarLocation = avatarLocation;
 	}
 	
-	public static String getEquipment() {
+	public String getEquipment() {
 		String data;
 		if (equipment == null) {
 			data = DatabaseQueryer.getData("getEquipment");
@@ -101,11 +101,11 @@ public class Controller {
 		}
 		return equipment;
 	}
-	public static void setEquipment(String equipment) {
+	public void setEquipment(String equipment) {
 		Controller.equipment = equipment;
 	}
 	
-	public static String getStyle() {
+	public String getStyle() {
 		String data;
 		if (style == null) {
 			data = DatabaseQueryer.getData("getStyle");
@@ -126,11 +126,11 @@ public class Controller {
 		}
 		return style;
 	}
-	public static void setStyle(String style) {
+	public void setStyle(String style) {
 		Controller.style = style;
 	}
 	
-	public static String getWebsite() {
+	public String getWebsite() {
 		String data;
 		if (website == null) {
 			data = DatabaseQueryer.getData("getWebsite");
@@ -151,11 +151,11 @@ public class Controller {
 		}
 		return website;
 	}
-	public static void setWebsite(String website) {
+	public void setWebsite(String website) {
 		Controller.website = website;
 	}
 	
-	public static String getWork_Interests() {
+	public String getWork_Interests() {
 		String data;
 		if (work_interests == null) {
 			data = DatabaseQueryer.getData("getWork_Interests");
@@ -176,11 +176,11 @@ public class Controller {
 		}
 		return work_interests;
 	}
-	public static void setWork_Interests(String work_interests) {
+	public void setWork_Interests(String work_interests) {
 		Controller.work_interests = work_interests;
 	}
 	
-	public static String getAbout() {
+	public String getAbout() {
 		String data;
 		if (about == null) {
 			data = DatabaseQueryer.getData("getAbout");
@@ -201,7 +201,7 @@ public class Controller {
 		}
 		return about;
 	}
-	public static void setAbout(String about) {
+	public void setAbout(String about) {
 		Controller.about = about;
 	}
 	
@@ -329,7 +329,7 @@ public class Controller {
 		this.comments_allowed = comments_allowed;
 	}
 	
-	public static String getPhotoTitle() {
+	public String getPhotoTitle() {
 		String data;
 		if (photoTitle == null) {
 			data = DatabaseQueryer.getData("photoTitle");
@@ -350,12 +350,12 @@ public class Controller {
 		}
 		return photoTitle;
 	}
-	public static void setPhotoTitle(String photoTitle) {
+	public void setPhotoTitle(String photoTitle) {
 		
 		Controller.photoTitle = photoTitle;
 	}
 	
-	public static String getRating() {
+	public String getRating() {
 		String data;
 		if (rating == null) {
 			data = DatabaseQueryer.getData("rating");
@@ -365,11 +365,11 @@ public class Controller {
 		}
 		return rating;
 	}
-	public static void setRating(String rating) {
+	public void setRating(String rating) {
 		Controller.rating = rating;
 	}
 	
-	public static String getPhotoPath() {
+	public String getPhotoPath() {
 		String data;
 		if (photoPath == null) {
 			data = DatabaseQueryer.getData("photoPath");
@@ -379,7 +379,7 @@ public class Controller {
 		}
 		return photoPath;
 	}
-	public static void setPhoto(File photo) {
+	public void setPhoto(File photo) {
 		Controller.photoPath = photoPath;
 	}
 
