@@ -11,18 +11,18 @@ import com.example.darkroom.DatabaseQueryer;
 
 public class Controller {
 
-	private static String userName;
-	private static String userAvatarPath;
-	private static String equipmentText;
-	private static String styleText;
-	private static String websiteText;
-	private static String workText;
-	private static String aboutText;
+	private static String displayName;
+	private static String avatarLocation;
+	private static String equipment;
+	private static String style;
+	private static String website;
+	private static String work_interests;
+	private static String about;
 	
-	private Boolean forHire; //need to translate 1s and 0s to boolean
-	private Boolean reviewsAllowed;
-	private Boolean guestBookAllowed;
-	private Boolean commentsAllowed;
+	private Boolean for_hire; //need to translate 1s and 0s to boolean
+	private Boolean reviews_allowed;
+	private Boolean guestbook_allowed;
+	private Boolean comments_allowed;
 	
 	
 	private static String photoTitle;
@@ -30,10 +30,10 @@ public class Controller {
 	private static String photoPath;
 	
 	
-	public static String getUserName() {
+	public static String getDisplayName() {
 		String data;
 		if (userName == null) {
-			data = DatabaseQueryer.getData("userName");
+			data = DatabaseQueryer.getData("getDisplayName");
 
 			try { 
 				String s = ""; 
@@ -47,18 +47,18 @@ public class Controller {
 					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
 				}
 			
-			return userName;
+			return displayName;
 		}
-		return userName;
+		return displayName;
 	}
-	public static void setUserName(String userName) {
-		Controller.userName = userName;
+	public static void setDisplayName(String displayName) {
+		Controller.displayName = displayName;
 	}
 	
-	public static String getUserAvatarPath() {
+	public static String getAvatarLocation() {
 		String data;
-		if (userAvatarPath == null) {
-			data = DatabaseQueryer.getData("userAvatarPath");
+		if (avatarLocation == null) {
+			data = DatabaseQueryer.getData("getAvatarLocation");
 
 			try { 
 				String s = ""; 
@@ -67,23 +67,23 @@ public class Controller {
 						JSONObject json = jArray.getJSONObject(i); 
 						s = s + json.getString("userAvatarPath"); 
 					}
-					userAvatarPath = s;
+					avatarLocation = s;
 				} catch (Exception e) {
 					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
 				}
 			
-			return userAvatarPath;
+			return avatarLocation;
 		}
-		return userAvatarPath;
+		return avatarLocation;
 	}
-	public static void setUserAvatar(String userAvatarPath) {
-		Controller.userAvatarPath = userAvatarPath;
+	public static void setAvatarLocation(String avatarLocation) {
+		Controller.avatarLocation = avatarLocation;
 	}
 	
-	public static String getEquipmentText() {
+	public static String getEquipment() {
 		String data;
-		if (equipmentText == null) {
-			data = DatabaseQueryer.getData("equipmentText");
+		if (equipment == null) {
+			data = DatabaseQueryer.getData("getEquipment");
 			
 			try { 
 				String s = ""; 
@@ -92,23 +92,23 @@ public class Controller {
 						JSONObject json = jArray.getJSONObject(i); 
 						s = s + json.getString("equipment"); 
 					}
-					equipmentText = s;
+					equipment = s;
 				} catch (Exception e) {
 					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
 				}
 			
-			return equipmentText;
+			return equipment;
 		}
-		return equipmentText;
+		return equipment;
 	}
-	public static void setEquipmentText(String equipmentText) {
-		Controller.equipmentText = equipmentText;
+	public static void setEquipment(String equipment) {
+		Controller.equipment = equipment;
 	}
 	
-	public static String getStyleText() {
+	public static String getStyle() {
 		String data;
-		if (styleText == null) {
-			data = DatabaseQueryer.getData("styleText");
+		if (style == null) {
+			data = DatabaseQueryer.getData("getStyle");
 			
 			try { 
 				String s = ""; 
@@ -117,23 +117,23 @@ public class Controller {
 						JSONObject json = jArray.getJSONObject(i); 
 						s = s + json.getString("style"); 
 					}
-					styleText = s;
+					style = s;
 				} catch (Exception e) {
 					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
 				}
 			
-			return styleText;
+			return style;
 		}
-		return styleText;
+		return style;
 	}
-	public static void setStyleText(String styleText) {
-		Controller.styleText = styleText;
+	public static void setStyle(String style) {
+		Controller.style = style;
 	}
 	
-	public static String getWebsiteText() {
+	public static String getWebsite() {
 		String data;
-		if (websiteText == null) {
-			data = DatabaseQueryer.getData("websiteText");
+		if (website == null) {
+			data = DatabaseQueryer.getData("getWebsite");
 
 			try { 
 				String s = ""; 
@@ -142,23 +142,23 @@ public class Controller {
 						JSONObject json = jArray.getJSONObject(i); 
 						s = s + json.getString("website"); 
 					}
-					websiteText = s;
+					website = s;
 				} catch (Exception e) {
 					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
 				}
 			
-			return websiteText;
+			return website;
 		}
-		return websiteText;
+		return website;
 	}
-	public static void setWebsiteText(String websiteText) {
-		Controller.websiteText = websiteText;
+	public static void setWebsite(String website) {
+		Controller.website = website;
 	}
 	
-	public static String getWorkText() {
+	public static String getWork_Interests() {
 		String data;
-		if (workText == null) {
-			data = DatabaseQueryer.getData("workText");
+		if (work_interests == null) {
+			data = DatabaseQueryer.getData("getWork_Interests");
 
 			try { 
 				String s = ""; 
@@ -167,23 +167,23 @@ public class Controller {
 						JSONObject json = jArray.getJSONObject(i); 
 						s = s + json.getString("work_interests"); 
 					}
-					workText = s;
+					work_interests = s;
 				} catch (Exception e) {
 					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
 				}
 			
-			return workText;
+			return work_interests;
 		}
-		return workText;
+		return work_interests;
 	}
-	public static void setWorkText(String workText) {
-		Controller.workText = workText;
+	public static void setWork_Interests(String work_interests) {
+		Controller.work_interests = work_interests;
 	}
 	
-	public static String getAboutText() {
+	public static String getAbout() {
 		String data;
-		if (aboutText == null) {
-			data = DatabaseQueryer.getData("about");
+		if (about == null) {
+			data = DatabaseQueryer.getData("getAbout");
 
 			try { 
 				String s = ""; 
@@ -192,23 +192,23 @@ public class Controller {
 						JSONObject json = jArray.getJSONObject(i); 
 						s = s + json.getString("about"); 
 					}
-					aboutText = s;
+					about = s;
 				} catch (Exception e) {
 					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
 				}
 			
-			return aboutText;
+			return about;
 		}
-		return aboutText;
+		return about;
 	}
-	public static void setAboutText(String aboutText) {
-		Controller.aboutText = aboutText;
+	public static void setAbout(String about) {
+		Controller.about = about;
 	}
 	
-	public Boolean getForHire() {
+	public Boolean getFor_Hire() {
 		String data;
-		if (forHire == null) {
-			data = DatabaseQueryer.getData("forHire");
+		if (for_hire == null) {
+			data = DatabaseQueryer.getData("getFor_Hire");
 
 			try { 
 				String s = ""; 
@@ -219,27 +219,27 @@ public class Controller {
 					}
 					int fh = Integer.parseInt(s);
 					if(fh == 1) {
-						forHire = true;
+						for_hire = true;
 					} else {
-						forHire = false;
+						for_hire = false;
 					}
 						
 				} catch (Exception e) {
 					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
 				}
 			
-			return forHire;
+			return for_hire;
 		}
-		return forHire;
+		return for_hire;
 	}
-	public void setForHire(Boolean forHire) {
-		this.forHire = forHire;
+	public void setForHire(Boolean for_hire) {
+		this.for_hire = for_hire;
 	}
 	
-	public Boolean getReviewsAllowed() {
+	public Boolean getReviews_Allowed() {
 		String data;
-		if (reviewsAllowed == null) {
-			data = DatabaseQueryer.getData("reviewsAllowed");
+		if (reviews_allowed == null) {
+			data = DatabaseQueryer.getData("getReviews_Allowed");
 
 			try { 
 				String s = ""; 
@@ -250,27 +250,27 @@ public class Controller {
 					}
 					int fh = Integer.parseInt(s);
 					if(fh == 1) {
-						reviewsAllowed = true;
+						reviews_allowed = true;
 					} else {
-						reviewsAllowed = false;
+						reviews_allowed = false;
 					}
 						
 				} catch (Exception e) {
 					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
 				}
 			
-			return reviewsAllowed;
+			return reviews_allowed;
 		}
-		return reviewsAllowed;
+		return reviews_allowed;
 	}
-	public void setReviewsAllowed(Boolean reviewsAllowed) {
-		this.reviewsAllowed = reviewsAllowed;
+	public void setReviewsAllowed(Boolean reviews_allowed) {
+		this.reviews_allowed = reviews_allowed;
 	}
 	
-	public Boolean getGuestBookAllowed() {
+	public Boolean getGuestbook_Allowed() {
 		String data;
-		if (guestBookAllowed == null) {
-			data = DatabaseQueryer.getData("guestBookAllowed");
+		if (guestbook_allowed == null) {
+			data = DatabaseQueryer.getData("getGuestbook_Allowed");
 
 			try { 
 				String s = ""; 
@@ -281,27 +281,27 @@ public class Controller {
 					}
 					int fh = Integer.parseInt(s);
 					if(fh == 1) {
-						guestBookAllowed = true;
+						guestbook_allowed = true;
 					} else {
-						guestBookAllowed = false;
+						guestbook_allowed = false;
 					}
 						
 				} catch (Exception e) {
 					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
 				}
 			
-			return guestBookAllowed;
+			return guestbook_allowed;
 		}
-		return guestBookAllowed;
+		return guestbook_allowed;
 	}
-	public void setGuestBookAllowed(Boolean guestBookAllowed) {
-		this.guestBookAllowed = guestBookAllowed;
+	public void setGuestBookAllowed(Boolean guestbook_allowed) {
+		this.guestbook_allowed = guestbook_allowed;
 	}
 	
-	public Boolean getCommentsAllowed() {
+	public Boolean getComments_Allowed() {
 		String data;
-		if (commentsAllowed == null) {
-			data = DatabaseQueryer.getData("commentsAllowed");
+		if (comments_allowed == null) {
+			data = DatabaseQueryer.getData("comments_allowed");
 
 			try { 
 				String s = ""; 
@@ -312,21 +312,21 @@ public class Controller {
 					}
 					int fh = Integer.parseInt(s);
 					if(fh == 1) {
-						commentsAllowed = true;
+						comments_allowed = true;
 					} else {
-						commentsAllowed = false;
+						comments_allowed = false;
 					}
 						
 				} catch (Exception e) {
 					Log.e("log_tag", "Error Parsing Data " + e.toString()); 
 				}
 			
-			return commentsAllowed;
+			return comments_allowed;
 		}
-		return commentsAllowed;
+		return comments_allowed;
 	}
-	public void setCommentsAllowed(Boolean commentsAllowed) {
-		this.commentsAllowed = commentsAllowed;
+	public void setCommentsAllowed(Boolean comments_allowed) {
+		this.comments_allowed = comments_allowed;
 	}
 	
 	public static String getPhotoTitle() {
